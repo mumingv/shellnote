@@ -1,6 +1,6 @@
 var CONFIG = {
   // your website's title
-  document_title: "Linux Shell 编程入门",
+  document_title: "Linux Shell 编程",
 
   // index page
   index: "README.md",
