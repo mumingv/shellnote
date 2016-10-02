@@ -8,7 +8,7 @@
 1. [前言](#README)
 2. [Shell 基本语法](#docs/syntax)
 
-## 其他
+## 附录 
 - [源码](https://github.com/mumingv/shelltutorial)
 - [修订历史](https://github.com/mumingv/shelltutorial/commits/master)
 - [反馈意见](https://github.com/mumingv/shelltutorial/issues)
