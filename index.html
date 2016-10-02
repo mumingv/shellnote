@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Shell 入门</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/marked.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ditto.js"></script>
+  <script src="js/prism.js"></script>
+</head>
+<body>
+  <!-- essential -->
+  <div id="sidebar"></div>
+  <div id="content"></div>
+  <!-- optional -->
+  <div id="back_to_top">back to top</div>
+  <div id="edit">edit</div>
+  <div id="loading">Loading ...</div>
+  <div id="error">Opps! ... File not found!</div>
+  <div id="flip"><div id="pageup">上一章</div><div id="pagedown">下一章</div></div>
+  <div class="progress-indicator-2"></div>
+
+  <script src="config.js"></script>
+  <script>
+    ditto.run();
+  </script>
+  <noscript>
+    <p>《Shell 入门》是一本开源的Shell语言教程, 你可以在这里看到一些基本的语法以及一些常用的代码示例。</p>
+    <p>本书为初级难度，有一台Linux主机并且了解一些linux的基础操作即可阅读本书。</p>
+  </noscript>
+</body>
+</html>
