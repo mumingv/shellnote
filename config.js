@@ -10,7 +10,7 @@ var CONFIG = {
 
   // where the docs are actually stored on github - so you can edit
   //base_url: "https://github.com/mumingv/shelltutorial/edit/gh-pages",
-  base_url: "https://github.com/mumingv/shelltutorial",
+  base_url: "https://github.com/mumingv/shelltutorial/blob/master",
 };
 
 // **************************
