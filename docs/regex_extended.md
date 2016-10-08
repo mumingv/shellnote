@@ -51,7 +51,7 @@
 
 ### 行起始标记 `^`
 
-#### 匹配以字母'H'开头的行：
+#### 匹配以字母'H'开头的行
 
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld" | grep -E '^H'
@@ -60,7 +60,7 @@ Hello
 
 ### 行结尾标记 `$`
 
-#### 匹配以字母'o'结尾的行：
+#### 匹配以字母'o'结尾的行
 
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld" | grep -E 'o$'
@@ -73,13 +73,13 @@ Hello
 
 单词边界指的是单词的起始位置或者结尾位置。通常用来表示单词边界的位置（或字符）通常有：行首、行尾、空格字符、TAB字符以及各标点符号。
 
-#### 匹配以字母'H'作为单词起始字符的行：
+#### 匹配以字母'H'作为单词起始字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '\bH'
 Hello
 ```
 
-#### 匹配以字母'd'作为单词结尾字符的行：
+#### 匹配以字母'd'作为单词结尾字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E 'd\b'
 world
@@ -104,7 +104,7 @@ $ echo -e "abc\t123\tdef" | grep -E '\b[0-9]{3}\b'
 abc     123     def
 ```
 
-#### 下面的'123'没有单词边界，所以无法匹配：
+#### 下面的'123'没有单词边界，所以无法匹配
 ```bash
 $ echo -e "abc123def" | grep -E '\b[0-9]{3}\b' 
 ```
@@ -114,13 +114,13 @@ $ echo -e "abc123def" | grep -E '\b[0-9]{3}\b'
 
 顾名思义，非单词边界是指除了能够标记单词边界的字符之外的其他字符所在的位置。
 
-#### 匹配字母'b'，但'b'不是单词起始字符：
+#### 匹配字母'b'，但'b'不是单词起始字符
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '\Bb'
 abcdefg
 ```
 
-#### 匹配连续的三个数字，且其左右均无单词边界：
+#### 匹配连续的三个数字，且其左右均无单词边界
 ```bash
 $ echo -e "abc123def" | grep -E '\B[0-9]{3}\B'  
 abc123def
@@ -129,7 +129,7 @@ abc123def
 
 ### 单词起始标记 `\<`
 
-#### 匹配以字母'H'作为单词起始字符的行：
+#### 匹配以字母'H'作为单词起始字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '\<H'
 Hello
@@ -139,7 +139,7 @@ Hello
 
 ### 单词结尾标记 `\>`
 
-#### 匹配以字母'd'作为单词结尾字符的行：
+#### 匹配以字母'd'作为单词结尾字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E 'd\>'
 world
@@ -152,7 +152,7 @@ Good morning
 
 ### 任意单个字符 `.`
 
-#### 匹配字母'o'紧接任意一个字符的行：
+#### 匹配字母'o'紧接任意一个字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E 'o.'
 world 
@@ -164,7 +164,7 @@ Good morning
 
 如果`[]`中的这组字符是连续的数字或者字母，可以使用`[-]`来表示。如：`[0123456789]`可以表示为`[0-9]`，`[abcdefghijklmnopqrstuvwxyz]`可以表示为`[a-z]`。
 
-#### 匹配包含'0','1','2','3'之中任意一个数字字符的行：
+#### 匹配包含'0','1','2','3'之中任意一个数字字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[0123]'
 1234567
@@ -175,7 +175,7 @@ $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[0123]'
 
 `[-]`表示字符范围。通常用来表示连续的一组字母，如： `[a-z]`；或者用来表示连续的一组数字，如：`[0-9]`。
 
-#### 匹配包含'0'到'3'之间任意一个数字字符的行：
+#### 匹配包含'0'到'3'之间任意一个数字字符的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[0-3]'
 1234567
@@ -185,5 +185,22 @@ $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[0-3]'
 
 ### 除了字符组或字符范围之外的任意一个字符 `[^]`
 
-
+#### 匹配包含除了'0'到'3'之间字符之外、任意一个数字字符的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[^0123]'
+abcdefg
+1234567
+Hello
+world
+Good morning
+```
+或者
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[^0-3]'
+abcdefg
+1234567
+Hello
+world
+Good morning
+```
 
