@@ -213,4 +213,24 @@ Good morning
 
 单词字符是一类字符的集合，一般来说，其包含字母、数字和下划线（也就是和大多数编程语言中命令变量的字符集一致，比如：C语言）。单词字符等价于：`[a-zA-Z0-9_]`。
 
+#### 匹配任意一个单词
+```
+$ $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\w+' -o
+abcdefg
+1234567
+Hello
+world
+Good
+morning
+abc
+def
+```
+注：`grep`命令的`-o`参数用来输出匹配上的字符串，而不是输出整行。
+
+
+
+
+
+
+
 
