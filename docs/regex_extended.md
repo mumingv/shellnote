@@ -36,6 +36,7 @@
 ||[[:lower:]]|小写字母，等价于：[a-z]|
 |子串|()|创建一个用于匹配的子串|
 ||(&#124;)|创建一个用于匹配的二选一子串|
+||\n|向后引用(back reference)匹配的子串|
 |重复|?|0次或1次|
 ||*|0次或多次|
 ||+|1次或多次|
@@ -421,8 +422,34 @@ abcdefg
 
 ## 子串
 
-### 子串
+### 创建一个用于匹配的子串 `()`
 
+#### 匹配包含子串'abc'的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld" | grep -E '(abc)'
+abcdefg
+```
+
+
+### 创建一个用于匹配的二选一子串 `(|)`
+
+#### 匹配包含子串'abc'或者子串'123'的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld" | grep -E '(abc|123)'
+abcdefg
+1234567
+```
+
+
+### 向后引用(back reference)匹配的子串 `\n`
+
+正则表达式中可以包含多个使用`()`包含的子串，可以使用\1、\2、...、\n的形式来引用对应序号的子串。
+
+#### 使用后向引用将`'digit 7'`改为`'digit-7'`
+```bash
+$ echo 'this is digit 7 in a number' | sed -r 's/(digit) ([0-9])/\1-\2/'  
+this is digit-7 in a number
+```
 
 
 

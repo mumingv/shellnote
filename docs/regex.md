@@ -28,7 +28,11 @@ Linux的很多命令都支持正则表达式，常见的有：
         <td>grep -P 'pattern' file1 file2 ...</td>
     </tr>
     <tr>
-        <td>sed</td>
+        <td rowspan="2">sed</td>
+        <td>基本</td>
+        <td>sed '/pattern/op' file1 file2 ...</td>
+    </tr>
+    <tr>
         <td>扩展</td>
         <td>sed -r '/pattern/op' file1 file2 ...</td>
     </tr>
