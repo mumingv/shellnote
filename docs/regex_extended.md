@@ -23,17 +23,17 @@
 ||\D|【ERE不支持】非数字，等价于：[^0-9]或[^d]|
 ||\s|空白字符，等价于：[ \n\r\t\f\v]|
 ||\S|非空白字符，等价于：[^ \n\r\t\f\v]|
-|分类字符II|[[:digit:]]|数字字符，等价于：[0-9]|
-||[[:alpha:]]|字母字符，等价于：[a-zA-Z]|
+|分类字符II|[[:cntrl:]]|控制字符，对应ASCII码：0x00-0x1F和0x7F|
+||[[:print:]]|可打印字符，对应ASCII码：0x20-0x7E|
+||[[:space:]]|空白字符，等价于：[ \n\r\t\f\v]|
+||[[:graph:]]|非空格字符，对应ASCII码：0x21-0x7E|
+||[[:punct:]]|标点，对应ASCII码：0x21-0x2F, 0x3A-0x40, 0x5B-0x60, 0x7B-0x7E|
 ||[[:alnum:]]|字母或数字，等价于：[a-zA-Z0-9]|
-||[[:cntrl:]]|控制字符，如：TAB等|
-||[[:graph:]]|非空格字符|
-||[[:lower:]]|小写字母，等价于：[a-z]|
+||[[:xdigit:]]|16进制数字，等价于：[0-9a-fA-F]|
+||[[:alpha:]]|字母字符，等价于：[a-zA-Z]|
+||[[:digit:]]|数字字符，等价于：[0-9]|
 ||[[:upper:]]|大写字母，等价于：[A-Z]|
-||[[:print:]]|可打印字符，如：字母、数字、空格等|
-||[[:punct:]]|标点，等价于：|
-||[[:space:]]|空白字符，包括：空格、TAB|
-||[[:xdigit:]]|16进制数字，等价于：[0-f]|
+||[[:lower:]]|小写字母，等价于：[a-z]|
 |子串|()|创建一个用于匹配的子串|
 ||(&#124;)|子串二选一|
 |重复|?|0次或1次|
@@ -207,7 +207,7 @@ Good morning
 
 ## 分类字符I
 
-所谓分类字符，是指一类字符的集合。这里将其分成两个类别（分类字符I和分类字符II）是对应不同的书写格式。分类字符I对应使用转义字符 `\` 表示的分类字符，如：`\w`；而分类字符I对应使用方括号 `[]`表示的分类字符，如：`[:digit:]`。
+所谓分类字符，是指一类字符的集合。这里将其分成两个类别（分类字符I和分类字符II）是为了对应不同的书写格式。分类字符I对应使用转义字符 `\` 表示的分类字符，如：`\w`；而分类字符I对应使用方括号 `[]`表示的分类字符，如：`[:digit:]`。
 
 ### 单词字符 `\w`
 
@@ -251,19 +251,171 @@ Good morning  # 空格是空白字符
 abc     def  # TAB是空白字符
 ```
 
+
 ### 非空白字符 `\S`
 
 顾名思义，非空白字符是指除了空白字符之外的所有字符。非空白字符`\S`等价于：`[^ \n\r\t\f\v]`。
 
 #### 匹配包含任意一个非空白字符的行
 ```bash
-$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\S' --color=auto   
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\S'
 abcdefg 
 1234567 
 Hello 
 world 
 Good morning 
 abc     def
+```
+
+
+## 分类字符II
+
+### 控制字符 `[[:cntrl:]]`
+
+控制字符`[[:cntrl:]]`对应的ASCII码为：0x00-0x1F和0x7F。
+
+#### 匹配包含任意一个控制字符的行：
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '[[:cntrl:]]'
+abc     def  # TAB是控制字符，空格不是控制字符
+```
+
+
+### 可打印字符 `[[:print:]]`
+
+#### 匹配包含任意一个可打印字符的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '[[:print:]]'
+abcdefg
+1234567
+Hello
+world
+Good morning  // 空格是可打印字符
+abc     def   // TAB不是可打印字符
+```
+
+
+### 空白字符 `[[:space:]]`
+
+空白字符`[[:space:]]`由一个可打印字符(空格`' ' `)和五个控制字符（`'\n\r\t\f\v'`）组成。
+
+#### 匹配包含任意一个空白字符的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '[[:space:]]'
+Good morning
+abc     def  # TAB是空白字符
+```
+
+
+### 非空格字符 `[[:graph:]]`
+
+空格字符`[[:graph:]]`可以理解成从可打印字符中去掉空格，即：非空格可打印字符，对应的ASCII码为：0x21-0x7E。
+
+#### 匹配包含任意一个字母或数字的行：
+```bash
+[work@CentOS ~]$ echo -e "abcdefg\n1234567\nXYZ" | grep -E '[[:graph:]]' 
+abcdefg
+1234567
+XYZ
+```
+
+### 标点符号 `[[:punct:]]`
+
+标点符号`[[:punct:]]`对应的ASCII码为：0x21-0x2F, 0x3A-0x40, 0x5B-0x60, 0x7B-0x7E。
+
+
+### 字母或数字 `[[:alnum:]]`
+
+字母或数字`[[:alpha:]]`等价于`[a-zA-Z0-9]`。
+
+#### 匹配包含任意一个字母或数字的行：
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[[:alnum:]]'
+abcdefg
+1234567
+Hello
+world
+Good morning
+```
+等价于
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[a-zA-Z0-9]'
+abcdefg
+1234567
+Hello
+world
+Good morning
+```
+
+
+### 16进制数字字符 `[[:xdigit:]]`
+
+16进制数字字符 `[[:xdigit:]]`，等价于：[0-9a-fA-F]。
+
+#### 匹配包含任意一个小写字母的行
+```bash
+$ echo -e "abcdefg\n1234567\nXYZ" | grep -E '[[:xdigit:]]' 
+abcdefg
+1234567
+```
+
+
+### 字母字符 `[[:alpha:]]`
+
+字母字符`[[:alpha:]]`等价于`[a-zA-Z]`。
+
+#### 匹配包含任意一个字母的行：
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[[:alpha:]]'
+abcdefg
+Hello
+world
+Good morning
+```
+等价于
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[a-zA-Z]'
+abcdefg
+Hello
+world
+Good morning
+```
+
+
+### 数字字符 `[[:digit:]]`
+
+数字字符`[[:digit:]]`等价于`[0-9]`。
+
+#### 匹配包含任意一个数字的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[[:digit:]]'
+1234567
+```
+等价于
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning" | grep -E '[0-9]'
+1234567
+```
+
+
+### 大写字母 `[[:upper:]]`
+
+大写字母`[[:lower:]]`等价于`[[:upper:]]`。
+
+#### 匹配包含任意一个大写字母的行
+```bash
+$ echo -e "abcdefg\n1234567\nHELLO" | grep -E '[[:upper:]]'
+HELLO
+```
+
+### 小写字母 `[[:lower:]]`
+
+小写字母`[[:lower:]]`等价于`[[:lower:]]`。
+
+#### 匹配包含任意一个小写字母的行
+```bash
+$ echo -e "abcdefg\n1234567\nHELLO" | grep -E '[[:lower:]]'
+abcdefg
 ```
 
 
