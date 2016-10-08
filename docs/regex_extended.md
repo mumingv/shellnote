@@ -211,11 +211,11 @@ Good morning
 
 ### 单词字符 `\w`
 
-单词字符是一类字符的集合，一般来说，其包含字母、数字和下划线（也就是和大多数编程语言中命令变量的字符集一致，比如：C语言）。单词字符等价于：`[a-zA-Z0-9_]`。
+单词字符是指能够组成单词的所有字符的集合，一般来说，其包含字母、数字和下划线（也就是和大多数编程语言中命名变量的字符集一致，比如：C语言就只允许使用字母、数字和下划线命名变量）。单词字符等价于：`[a-zA-Z0-9_]`。
 
 #### 匹配任意一个单词
-```
-$ $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\w+' -o
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\w+' -o
 abcdefg
 1234567
 Hello
@@ -228,7 +228,21 @@ def
 注：`grep`命令的`-o`参数用来输出匹配上的字符串，而不是输出整行。
 
 
+### 非单词字符 `\W`
 
+顾名思义，非单词字符就是指除了单词字符之外的所有字符的集合。非单词字符等价于：`[^a-zA-Z0-9_]`。
+
+#### 匹配包含任意一个非单词的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\W+'
+Good morning  // 空格是非单词
+abc     def   // TAB是非单词
+```
+
+
+### 空白字符 `\s`
+
+空白字符`\s`等价于：`[ \n\r\t\f\v]`。
 
 
 
