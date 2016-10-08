@@ -21,8 +21,8 @@
 ||\W|非单词字符，等价于：[^a-zA-Z0-9_]|
 ||\d|【ERE不支持】数字，等价于：[0-9]|
 ||\D|【ERE不支持】非数字，等价于：[^0-9]或[^d]|
-||\s|空白字符，如：空格、TAB、回车、换行|
-||\S|非空白字符，等价于：[^s]|
+||\s|空白字符，等价于：[ \n\r\t\f\v]|
+||\S|非空白字符，等价于：[^ \n\r\t\f\v]|
 |分类字符II|[[:digit:]]|数字字符，等价于：[0-9]|
 ||[[:alpha:]]|字母字符，等价于：[a-zA-Z]|
 ||[[:alnum:]]|字母或数字，等价于：[a-zA-Z0-9]|
@@ -235,16 +235,35 @@ def
 #### 匹配包含任意一个非单词的行
 ```bash
 $ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\W+'
-Good morning  // 空格是非单词
-abc     def   // TAB是非单词
+Good morning  # 空格是非单词
+abc     def   # TAB是非单词
 ```
 
 
 ### 空白字符 `\s`
 
-空白字符`\s`等价于：`[ \n\r\t\f\v]`。
+空白字符`\s`等价于：`[ \n\r\t\f\v]`。其中，空格`' '`为可打印字符，其他五个字符为控制字符。
 
+#### 匹配包含任意一个空白字符的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\s'
+Good morning  # 空格是空白字符
+abc     def  # TAB是空白字符
+```
 
+### 非空白字符 `\S`
 
+顾名思义，非空白字符是指除了空白字符之外的所有字符。非空白字符`\S`等价于：`[^ \n\r\t\f\v]`。
+
+#### 匹配包含任意一个非空白字符的行
+```bash
+$ echo -e "abcdefg\n1234567\nHello\nworld\nGood morning\nabc\tdef" | grep -E '\S' --color=auto   
+abcdefg 
+1234567 
+Hello 
+world 
+Good morning 
+abc     def
+```
 
 
