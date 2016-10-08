@@ -8,9 +8,9 @@
 0. [前言](#README)
 0. [Shell 基本语法](#docs/syntax)
 0. [正则表达式](#docs/regex)
-    1. [基本正则表达式](#docs/regex_basic)
-    1. [扩展正则表达式](#docs/regex_extended)
-    1. [Perl正则表达式](#docs/regex_perl)
+    - [基本正则表达式](#docs/regex_basic)
+    - [扩展正则表达式](#docs/regex_extended)
+    - [Perl正则表达式](#docs/regex_perl)
 
 ## 附录 
 - [源码](https://github.com/mumingv/shelltutorial)

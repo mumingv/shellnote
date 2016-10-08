@@ -17,25 +17,25 @@ Linux的很多命令都支持正则表达式，常见的有：
     <tr>
         <td rowspan="3">grep</td>
         <td>基本</td>
-        <td>`grep 'pattern' file1 file2 ...`</td>
+        <td>grep 'pattern' file1 file2 ...</td>
     </tr>
     <tr>
         <td>扩展</td>
-        <td>`grep -E 'pattern' file1 file2 ...`</td>
+        <td>grep -E 'pattern' file1 file2 ...</td>
     </tr>
     <tr>
         <td>Perl</td>
-        <td>`grep -P 'pattern' file1 file2 ...`</td>
+        <td>grep -P 'pattern' file1 file2 ...</td>
     </tr>
     <tr>
         <td>sed</td>
         <td>扩展</td>
-        <td>`sed -r '/pattern/op' file1 file2 ...`</td>
+        <td>sed -r '/pattern/op' file1 file2 ...</td>
     </tr>
     <tr>
         <td>awk</td>
         <td>扩展</td>
-        <td>`awk '/pattern/ { statements }' file1 file2 ...`</td>
+        <td>awk '/pattern/ { statements }' file1 file2 ...</td>
 </table>
  
 各主流编程语言也都支持正则表达式。
