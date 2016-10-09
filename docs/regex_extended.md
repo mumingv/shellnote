@@ -300,7 +300,7 @@ ASCII共计128个字符，对应16进制数的范围为：0x00 ~ 0xFF。
 
 俗话说：“一图胜千言”。请看：
 
-[![ASCII字符分类图](images/ascii_classify.png)](images/cover-2nd.jpg)
+[![ASCII字符分类图](images/ascii_classify.png)](images/ascii_classify.png)
 
 ### 控制字符 `[[:cntrl:]]`
 
