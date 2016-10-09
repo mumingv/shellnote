@@ -216,9 +216,78 @@ $ echo ${#arr_str[@]}
 ```
 
 
+### 关联数组
 
+关联数组中的元素没有顺序，也就没有所谓的次序编号，数组元素需要通过key来获取。
 
+关联数组除了定义和获取元素这两个操作与普通数组稍有区别之外，其他操作（如：获取数组索引、数组长度）均与普通数组保持一致。
 
+#### 定义关联数组
+
+关联数组在定义之前需要先使用命令`declare -A`进行声明。
+
+关联数组有两种定义方式，分别是列表方式和key-value方式。使用列表方式定义关联数组的话，列表中的元素也使用key-value方式。
+
+使用列表方式定义关联数组
+```bash
+$ declare -A fruits_value
+$ fruits_value=([apple]='100 dollars' [orange]='150 dollars')
+```
+
+使用key-value方式定义关联数组
+```bash
+$ declare -A fruits_value
+$ fruits_value[apple]='100 dollars'
+$ fruits_value[orange]='150 dollars'
+```
+
+#### 获取关联数组元素的值
+
+使用key获取某个数组元素的值（value）
+```bash
+$ echo ${fruits_value[orange]}
+150 dollars
+```
+```bash
+$ fruit_name=orange
+$ echo ${fruits_value[$fruit_name]}
+150 dollars
+```
+
+获取所有数组元素的值 `*` `@` 
+```bash
+$ echo ${fruits_value[*]}
+150 dollars 100 dollars
+```
+```bash
+$ echo ${fruits_value[@]}
+150 dollars 100 dollars
+```
+
+#### 获取关联数组元素的索引
+
+获取数组索引 `!`
+```bash
+$ echo ${!fruits_value[*]}
+orange apple
+```
+```bash
+$ echo ${!fruits_value[@]}
+orange apple
+```
+注：关联数组的索引是没有顺序的。
+
+#### 获取普通数组长度
+
+获取数组长度（数组中的元素个数） `#`
+```bash
+$ echo ${#fruits_value[*]}
+2
+```
+```bash
+$ echo ${#fruits_value[@]}
+2
+```
 
 
 
