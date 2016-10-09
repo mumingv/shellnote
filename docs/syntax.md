@@ -290,12 +290,56 @@ $ echo ${#fruits_value[@]}
 ```
 
 
+### 二维数组
+
+Shell不支持二维数组，如果需要使用二维数组，可以使用一维数组进行模拟。
 
 
+## 列表
 
+列表就是一系列的字符或者字符串，如：a b c d e f g，列表的元素之间使用空格进行分隔。
 
+可以使用`{..}`来生成常用的字母列表或者数字列表，通常用在循环语句当中。
 
+### 常见的列表
 
+大写字母列表
+```bash
+$ echo {A..Z}
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+```
+```bash
+$ echo {Z..A}
+Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+```
+
+小写字母列表
+```bash
+$ echo {a..z} 
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+```
+```bash
+$ echo {z..a}
+z y x w v u t s r q p o n m l k j i h g f e d c b a
+```
+
+数字列表
+```bash
+$ echo {0..9}
+0 1 2 3 4 5 6 7 8 9
+```
+```bash
+$ echo {9..0} 
+9 8 7 6 5 4 3 2 1 0
+```
+```bash
+$ echo {-3..9}
+-3 -2 -1 0 1 2 3 4 5 6 7 8 9
+```
+```bash
+$ echo {9..-3}
+9 8 7 6 5 4 3 2 1 0 -1 -2 -3
+```
 
 
 
