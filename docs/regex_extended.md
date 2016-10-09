@@ -271,6 +271,11 @@ abc     def
 
 ## 分类字符II
 
+### ASCII字符表
+
+ASCII共计128个字符，对应16进制数的范围为：0x00 ~ 0xFF。
+对应2进制以及8进制的表示可以执行命令`man ascii`查看。
+
 |   |0      |1  |2    |3 |4 |5 |6 |7     | 
 |---|-------|---|-----|--|--|--|--|---   |
 |0: |NUL(\0)|DLE|SPACE|0 |@ |P |` |p     | 
@@ -289,6 +294,13 @@ abc     def
 |D: |CR (\r)|GS |-    |= |M |] |m |}     | 
 |E: |SO     |RS |.    |> |N |^ |n |~     | 
 |F: |SI     |US |/    |? |O |_ |o |DEL   | 
+
+
+### ASCII字符分类
+
+俗话说：“一图胜千言”。请看：
+
+[![ASCII字符分类图](images/ascii_classify.png)](images/cover-2nd.jpg)
 
 ### 控制字符 `[[:cntrl:]]`
 
