@@ -645,5 +645,41 @@ $ echo -e "abc\n123\na^3" | grep -E 'a^3'
 |?      |可选(0次或1次)|含义不变   |
 |{      |重复次数开始标记|含义不变   |
 |}      |重复次数结束标记|含义不变   |
-|-      |字面意义   |范围标记   |
+|-      |字面意义   |位于方括号内的结束位置表示字面意义，位于其他位置表示范围标记   |
+
+说明：
+1. 如果要在方括号内包含字面意义的右方括号字符`]`的话，需要将其放在方括号内的开始位置。
+```clike
+$ echo -e "abc\n]\ndef]\nghi"
+abc
+]
+def]
+ghi
+```
+```clike
+$ echo -e "abc\n]\ndef]\nghi" | grep -E '[]h-i]'
+]
+def]
+ghi
+```
+2. 如果要在方括号内包含字面意义的左方括号字符`[`的话，将其放在方括号内的任意位置均可。
+```clike
+$ echo -e "abc\n[\ndef[\nghi"
+abc
+[
+def[
+ghi
+```
+```clike
+$ echo -e "abc\n[\ndef[\nghi" | grep -E '[[h-i]'
+[
+def[
+ghi
+```
+```clike
+$ echo -e "abc\n[\ndef[\nghi" | grep -E '[h-i[]'
+[
+def[
+ghi
+```
 
