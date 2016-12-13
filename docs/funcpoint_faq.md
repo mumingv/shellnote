@@ -16,15 +16,23 @@
 
 ## 如何连接字符串？
 
+Shell中的所有变量值都是字符串，字符串连接时无需连接符。
+
 ```bash
 #!/bin/bash
+
+# 连接自定义字符串
 name='Jay'
 tel='18612345678'
 echo ${name}${tel}
+
+# 连接Shell系统变量字符串 
+echo "Hello"$1
 ```
 ```bash
-$ sh string_concat.sh 
+$ sh string_concat.sh Jay
 Jay18612345678
+HelloJay
 ```
 
 参考：
