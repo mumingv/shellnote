@@ -12,3 +12,25 @@
 - [语法](#docs/syntax#常用的特殊变量)
 - [示例1](https://github.com/mumingv/shell/blob/master/books/my_shell_cookbook/c01/function.sh)
 - [示例2](https://github.com/mumingv/shell/blob/master/books/my_shell_cookbook/c04/4_02_word_freq.sh)
+
+
+## 如何连接字符串？
+
+```bash
+#!/bin/bash
+name='Jay'
+tel='18612345678'
+echo ${name}${tel}
+```
+```bash
+$ sh string_concat.sh 
+Jay18612345678
+```
+
+参考：
+- [示例](https://github.com/mumingv/shell/blob/master/funcpoint/string_concat.sh)
+
+
+
+
+
