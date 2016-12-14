@@ -39,6 +39,31 @@ HelloJay
 - [示例](https://github.com/mumingv/shell/blob/master/funcpoint/string_concat.sh)
 
 
+## 如何获取日期和时间信息？
+
+### 获取当前日期
+
+```bash
+$ date +%F
+2016-12-14
+$ date +%Y-%m-%d
+2016-12-14
+```
+
+
+### 获取当前时间
+
+```bash
+$ date +%T
+10:38:56
+$ date +%H:%M:%S
+10:38:59
+```
+
+
+
+
+
 
 
 
