@@ -6,6 +6,7 @@
 
 ## 目录
 0. [前言](#README)
+0. [Linux 命令示例](#docs/command)
 0. [Shell 基本语法](#docs/syntax)
 0. [正则表达式](#docs/regex)
     - [基本正则表达式](#docs/regex_basic)
