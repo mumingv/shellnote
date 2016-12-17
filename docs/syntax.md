@@ -501,6 +501,51 @@ fi
 |= 或 == |等于|[[ abc = abc ]] 或 [[ abc == abc ]]|
 |!=|不等于|[[ abc == def ]]|
 
+<font color="red">说明：字符串比较也可以使用单个方括号[]，但是需要确保比较操作符两侧的操作数不能为空，否则会报如下错误。</font>
+
+错误示例：左侧变量为空。
+
+```bash
+$ cat test.sh 
+#!/bin/bash
+var=""
+if [ $var != def ]; then
+    echo "ok"
+fi
+```
+```bash
+$ sh test.sh 
+test.sh: line 3: [: !=: unary operator expected
+```
+
+错误示例：右侧变量为空。
+
+```bash
+$ cat test.sh
+#!/bin/bash
+var=""
+if [ abc != $var ]; then
+    echo "ok"
+fi
+```
+```bash
+$ sh test.sh 
+test.sh: line 3: [: abc: unary operator expected
+```
+
+解决方法1：使用单方括号，操作数使用引号括起来。
+
+```bash
+[ "$var" != def ]
+```
+
+解决方法2：使用单方括号，操作数使用引号括起来，同时加上“辅助”字符。不过，这种方式只能适用于两个操作数都是变量的场景。
+
+```bash
+[ "$var1"x != "$var2"x ]
+```
+
+
 
 ### 文件系统相关条件测试 `[]` `[[]]` `test`
 
