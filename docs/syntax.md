@@ -545,7 +545,9 @@ for c in {a..c}; do
 done
 ```
 
+
 #### 遍历数组元素
+
 ```bash
 arr=("apple" "banana" "orange")
 for fruit in ${arr[*]}; do
@@ -559,7 +561,19 @@ for fruit in ${arr[@]}; do
 done
 ```
 
+
+#### 分割遍历字符串: 不带IFS，默认使用空格分割
+
+```bash
+line="Jay Angela Henry"
+for word in $line; do
+    echo "$word 1"
+done
+```
+
+
 #### 分割遍历字符串: 带IFS
+
 ```bash
 # for语句里in后面的字符串必须写成变量的方式，不能直接写字符串字面值
 IFS=":"
