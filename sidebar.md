@@ -8,6 +8,7 @@
 0. [前言](#README)
 0. [Linux 命令示例](#docs/command)
 0. [Shell 基本语法](#docs/syntax)
+0. [Shell 扩展语法](#docs/syntax_ex)
 0. [正则表达式](#docs/regex)
     - [基本正则表达式](#docs/regex_basic)
     - [扩展正则表达式](#docs/regex_extended)
