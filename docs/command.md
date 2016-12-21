@@ -2,6 +2,7 @@
 
 ## 命令 A B C D E F G
 
+[find - search for files in a directory hierarchy 查找文件](#docs/command_a_to_g)
 
 ## 命令 H I J K L M N
 
