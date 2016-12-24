@@ -4,6 +4,8 @@
 
 [find - search for files in a directory hierarchy 查找文件](#docs/command_a_to_g)
 
+[grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_a_to_g)
+
 ## 命令 H I J K L M N
 
 [ls - list directory contents 显示目录内容](#docs/command_h_to_n)
