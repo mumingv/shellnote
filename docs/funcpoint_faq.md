@@ -39,6 +39,50 @@ HelloJay
 - [示例](https://github.com/mumingv/shell/blob/master/funcpoint/string_concat.sh)
 
 
+## 如何获取字符串的最后两位？
+
+```bash
+$ string=hello 
+$ echo ${string}
+hello
+```
+
+### 方法1：直接使用字符串提取语法
+
+```bash
+$ echo ${string:(-2)}
+lo
+$ echo ${string:(-2):2}
+lo
+```
+```bash
+$ echo ${string:$((-2))}
+lo
+$ echo ${string:$((-2)):2}
+lo
+```
+```bash
+$ echo ${string:$((${#string}-2))}  
+lo
+$ echo ${string:$((${#string}-2)):2}
+lo
+```
+
+说明：$(())表示算术运算。
+
+
+### 方法2：使用grep命令
+
+```bash
+$ echo $string | grep -E -o ..$
+lo
+```
+
+说明：-o参数表示只输出匹配的部分字符串，而不是输出整行；..$为正则表达式。
+
+
+
+
 ## 如何获取日期和时间信息？
 
 ### 获取当前日期
