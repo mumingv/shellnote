@@ -81,6 +81,32 @@ lo
 说明：-o参数表示只输出匹配的部分字符串，而不是输出整行；..$为正则表达式。
 
 
+### 方法3：使用awk命令
+
+```bash
+$ echo $string | awk '{print substr($0, length($0)-1, length($0))}'
+lo
+```
+
+
+### 方法4：使用cut命令
+
+```bash
+$ echo $string | rev | cut -c -2 | rev
+lo
+```
+
+`rev`命令用于颠倒字符串；`cut -c -2`表示每个字符作为一列，并且获取前两列。
+
+
+### 方法5：使用colrm命令
+
+```bash
+$ echo $string | rev | colrm 3 | rev
+lo
+```
+
+`colrm 3`命令表示删除从第3列一直到最后一列，列的编号从1开始。
 
 
 ## 如何获取日期和时间信息？
