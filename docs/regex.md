@@ -40,6 +40,12 @@ Linux的很多命令都支持正则表达式，常见的有：
         <td>awk</td>
         <td>扩展</td>
         <td>awk '/pattern/ { statements }' file1 file2 ...</td>
+    </tr>
+    <tr>
+        <td>vim</td>
+        <td>基本</td>
+        <td>:%s/pattern/new_string/gc</td>
+    </tr>
 </table>
  
 各主流编程语言也都支持正则表达式。

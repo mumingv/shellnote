@@ -39,6 +39,7 @@ $ echo ${string:4}
 efghijklmnopqrstuvwxyz
 $ echo ${string:4:3}
 efg
+```
 
 首字符编号为负数表示从字符串后面开始数（如：-1表示最后一个字符；-2表示倒数第二个字符；...），负数需要使用小括号包含。
 
