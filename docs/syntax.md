@@ -631,11 +631,26 @@ done
 ```
 
 #### 遍历数组元素（使用C语言格式，只针对普通数组）
+
 ```bash
 arr=("apple" "banana" "orange")
 for ((i=0; i<${#arr[*]}; i++)) {
     echo "C: fruit --> ${arr[$i]}"
 }
+```
+
+
+#### 遍历目录下的所有文件名称
+
+```bash
+for i in *; do
+    echo $i
+done
+```
+```
+json_json_decode.php
+json_json_encode.php
+...
 ```
 
 
