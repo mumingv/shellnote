@@ -14,7 +14,7 @@
 
 ## 命令 O P Q R S T 
 
-[tar - 打包目录和文件](#docs/command_o_to_t)
+[tar - 打包目录和文件](#docs/command_o_to_t#tar---打包目录和文件)
 
 
 ## 命令 U V W X Y Z
