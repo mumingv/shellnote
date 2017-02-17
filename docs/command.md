@@ -9,6 +9,8 @@
 
 ## 命令 H I J K L M N
 
+[kibitz - allow two people to interact with one shell 师徒对话](#docs/command_h_to_n)
+
 [ls - list directory contents 显示目录内容](#docs/command_h_to_n)
 
 
