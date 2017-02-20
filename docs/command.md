@@ -1,5 +1,25 @@
 # 命令示例
 
+## 文本处理
+
+#### 
+
+|命令                                  |功能                                       |
+|--------------------------------------|-------------------------------------------|
+|[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
+
+
+## 开发调试
+
+#### 
+
+|命令                                  |功能                                       |
+|--------------------------------------|-------------------------------------------|
+|[ps](#docs/command_list#ps)           |查询进行信息                               |
+|[pstack](#docs/command_list#pstack)   |查询线程堆栈信息                           |
+|[pstree](#docs/command_list#pstree)   |显示进程树                                 |
+
+
 ## 命令列表
 
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
