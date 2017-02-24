@@ -1,5 +1,24 @@
 # 命令列表
 
+## ab
+
+###  
+
+
+## crontab
+
+###    
+
+#### 示例：设置定时任务，每10分钟执行一次
+
+```
+$ crontab -e
+...
+$ crontab -l
+*/10 * * * * sh /home/work/odp/app/audio/script/news/format_feed_category_dada_to_redis.sh online
+```
+
+
 ## kibitz
 
 前提：安装tcl和expect。
