@@ -294,3 +294,23 @@ $ tar cvZf abc.tar.Z
 $ tar xvZf abc.tar.Z
 ```
 
+
+## tr
+
+###  
+
+#### 示例：删除文本中的空格
+
+```
+$ echo 'Hello world' | tr -d ' '
+Helloworld
+```
+
+
+
+
+
+
+
+
+
