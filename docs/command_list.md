@@ -2,7 +2,80 @@
 
 ## ab
 
+|参数名称           |参数含义                           |
+|-------------------|-----------------------------------|
+|-n requests        |发送的HTTP请求的总数               |
+|-c concurrency     |并发数（即：模拟用户数）           |
+|-k                 |使用长连接模式                     |
+
+
 ###  
+
+#### 示例：10并发，总共发送1000次HTTP请求
+
+```
+$ ab -c 10 -n 1000 http://123.56.21.232:8206/index.html
+This is ApacheBench, Version 2.3 <$Revision: 1430300 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 123.56.21.232 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        nginx/1.8.0
+Server Hostname:        123.56.21.232
+Server Port:            8206
+
+Document Path:          /index.html
+Document Length:        1300 bytes
+
+Concurrency Level:      10
+Time taken for tests:   8.566 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      1749000 bytes
+HTML transferred:       1300000 bytes
+Requests per second:    116.75 [#/sec] (mean)
+Time per request:       85.656 [ms] (mean)
+Time per request:       8.566 [ms] (mean, across all concurrent requests)
+Transfer rate:          199.40 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   41  19.0     45      74
+Processing:     1   44  19.0     47      75
+Waiting:        1   43  18.7     45      74
+Total:          1   85  30.9     97     110
+
+Percentage of the requests served within a certain time (ms)
+  50%     97
+  66%     99
+  75%    100
+  80%    100
+  90%    101
+  95%    105
+  98%    107
+  99%    107
+ 100%    110 (longest request)
+```
+
+结果中重点字段的含义：
+
+|字段名称           |字段含义                           |
+|-------------------|-----------------------------------|
+|Requests per second|每秒请求数，即：Web服务器的吞吐率。</br>计算公式：Complete requests / Time taken for tests  |
 
 
 ## crontab
