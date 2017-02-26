@@ -7,6 +7,7 @@
 |命令                                  |功能                                       |
 |--------------------------------------|-------------------------------------------|
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
+|[sort](#docs/command_list#sort)       |对文本行进行排序                           |
 
 
 ## 开发调试
@@ -40,6 +41,8 @@
 [pstack - print a stack trace of a running process 查询线程堆栈信息](#docs/command_list#pstack)
 
 [pstree - display a tree of processes 显示进程树](#docs/command_list#pstree)
+
+[sort - sort lines of text files 对文本行进行排序](#docs/command_list#sort)
 
 [tar - 打包目录和文件](#docs/command_list#tar)
 
