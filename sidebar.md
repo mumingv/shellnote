@@ -21,6 +21,10 @@
 0. [数据库](#docs/demo_database)
 
 
+## 读书笔记
+0. [《Linx Shell脚本攻略》](#docs/book_scripting_cookbook)
+
+
 ## 附录 
 - [源码](https://github.com/mumingv/shelltutorial)
 - [修订历史](https://github.com/mumingv/shelltutorial/commits/master)
