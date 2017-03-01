@@ -6,6 +6,7 @@
 
 ## 目录
 0. [前言](#README)
+0. [示例汇总](#docs/demo_total)
 0. [Linux 命令示例](#docs/command)
 0. [Shell 基本语法](#docs/syntax)
 0. [Shell 扩展语法](#docs/syntax_ex)
