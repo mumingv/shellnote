@@ -49,4 +49,5 @@
 
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)
 
+[watch - execute a program periodically, showing output fullscreen 定时执行程序并输出结果到终端](#docs/command_list#watch)
 

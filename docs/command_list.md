@@ -307,10 +307,19 @@ Helloworld
 ```
 
 
+## watch
 
+被watch的命令默认每隔2秒执行一次。
 
+### 
 
+#### 示例：查看当前目录下文件数量的变化
 
+```
+$ watch 'ls -1 | wc -l'
+```
 
-
+<font color="red">
+说明：被watch的命令需要使用引号括起来。
+</font>
 
