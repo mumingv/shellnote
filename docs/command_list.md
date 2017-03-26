@@ -150,6 +150,22 @@ drwxr-xr-x 2 root root 4096 Dec 16 01:25 .
 ```
 
 
+## lsof
+
+###  
+
+示例：根据进程ID查询该进程打开的文件。源码：[链接](https://github.com/mumingv/shell/tree/master/command/strace/testlsof)。
+
+```
+$ ./a.out &
+[1] 17470
+$ lsof -p 17470
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+...
+a.out   17470 work    3r   REG  202,1        0  289936 /tmp/foo
+```
+
+
 ## ps
 
 ### 
@@ -230,6 +246,8 @@ redis-server(22728)─┬─{redis-server}(22729)
 
 
 ## sort
+
+######  
 
 |参数名称           |参数含义                           |
 |-------------------|-----------------------------------|

@@ -18,6 +18,7 @@
 |命令                                  |功能                                       |
 |--------------------------------------|-------------------------------------------|
 |[ab](#docs/command_list#ab)           |HTTP服务器性能测试                         |
+|[lsof](#docs/command_list#lsof)       |查询打开的文件                             |
 |[ps](#docs/command_list#ps)           |查询进行信息                               |
 |[pstack](#docs/command_list#pstack)   |查询线程堆栈信息                           |
 |[pstree](#docs/command_list#pstree)   |显示进程树                                 |
@@ -36,6 +37,8 @@
 [kibitz - allow two people to interact with one shell 师徒对话](#docs/command_list#kibitz)
 
 [ls - list directory contents 显示目录内容](#docs/command_list#ls)
+
+[lsof - list open files 查询打开的文件](#docs/command_list#lsof)
 
 [ps - report a snapshot of the current processes 查询进程信息](#docs/command_list#ps)
 
