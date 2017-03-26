@@ -48,6 +48,8 @@
 
 [sort - sort lines of text files 对文本行进行排序](#docs/command_list#sort)
 
+[strace - trace system calls and signals 跟踪系统调用和信号](#docs/command_list#strace)
+
 [tar - 打包目录和文件](#docs/command_list#tar)
 
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)

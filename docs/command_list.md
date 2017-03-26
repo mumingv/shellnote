@@ -2,12 +2,13 @@
 
 ## ab
 
+######  
+
 |参数名称           |参数含义                           |
 |-------------------|-----------------------------------|
 |-n requests        |发送的HTTP请求的总数               |
 |-c concurrency     |并发数（即：模拟用户数）           |
 |-k                 |使用长连接模式                     |
-
 
 ###  
 
@@ -280,6 +281,28 @@ $ cat news_query.txt | head -n 10 | sort -t$'\t' -k2 -nr
 上海梦花街      16      0       0       0       0       2       14      5
 安记紫菜 塑料袋 12      0       0       0       0       12      0       4
 商河爆炸        6       0       0       0       0       0       6       5
+```
+
+
+## strace
+
+######  
+
+|参数名称           |参数含义                           |
+|-------------------|-----------------------------------|
+|-o filename        |将输出保存到指定的文件             |
+
+###  
+
+示例：跟踪lsof的系统调用，查看打开文件'/tmp/foo'所使用的方法。源码：[链接](https://github.com/mumingv/shell/tree/master/command/strace/testlsof)。
+
+```
+$ gcc testlsof.c
+$ ./a.out &
+[2] 17795
+$ strace -o lsof.strace lsof -p 17755
+$ grep '/tmp/foo' lsof.strace 
+readlink("/proc/17755/fd/3", "/tmp/foo", 4096) = 8
 ```
 
 
