@@ -92,6 +92,13 @@ $ crontab -l
 ```
 
 
+## grep
+
+###  
+
+
+
+
 ## kibitz
 
 前提：安装tcl和expect。
