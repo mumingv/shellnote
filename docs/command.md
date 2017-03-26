@@ -15,13 +15,14 @@
 
 #### 
 
-|命令                                  |功能                                       |
-|--------------------------------------|-------------------------------------------|
-|[ab](#docs/command_list#ab)           |HTTP服务器性能测试                         |
-|[lsof](#docs/command_list#lsof)       |查询打开的文件                             |
-|[ps](#docs/command_list#ps)           |查询进行信息                               |
-|[pstack](#docs/command_list#pstack)   |查询线程堆栈信息                           |
-|[pstree](#docs/command_list#pstree)   |显示进程树                                 |
+|命令                                   |功能                                       |
+|---------------------------------------|-------------------------------------------|
+|[ab](#docs/command_list#ab)            |HTTP服务器性能测试                         |
+|[lsof](#docs/command_list#lsof)        |查询打开的文件                             |
+|[ps](#docs/command_list#ps)            |查询进行信息                               |
+|[pstack](#docs/command_list#pstack)    |查询线程堆栈信息                           |
+|[pstree](#docs/command_list#pstree)    |显示进程树                                 |
+|[strace](#docs/command_list#strace)    |跟踪系统调用和信号                         |
 
 
 ## 命令列表
