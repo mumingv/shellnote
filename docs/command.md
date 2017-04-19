@@ -33,7 +33,7 @@
 
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
-[grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#find)
+[grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#grep)
 
 [kibitz - allow two people to interact with one shell 师徒对话](#docs/command_list#kibitz)
 
@@ -56,4 +56,9 @@
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)
 
 [watch - execute a program periodically, showing output fullscreen 定时执行程序并输出结果到终端](#docs/command_list#watch)
+
+[wget - The non-interactive network downloader 下载工具](#docs/command_list#wget)
+
+
+
 

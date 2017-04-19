@@ -394,3 +394,33 @@ $ watch 'ls -1 | wc -l'
 说明：被watch的命令需要使用引号括起来。
 </font>
 
+
+## wget
+
+######   
+
+|参数名称                   |参数含义                           |
+|---------------------------|-----------------------------------|
+|-r, --recursive            |递归下载                           |
+|-nH, --no-host-directories |不要主机目录                       |
+
+### 
+
+#### 示例：下载网络目录下的所有文件
+
+```
+$ wget -r -nH http://cp01-shifen-001.cp01.baidu.com:8030/
+$ ls -1
+http_server.py
+index.html
+newnext.tar.gz
+news_query.php
+nohup.out
+playcontent.tar.gz
+test.txt
+```
+
+
+
+
+
