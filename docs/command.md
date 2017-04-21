@@ -31,6 +31,8 @@
 
 [crontab - maintain crontab files for individual users 定时任务](#docs/command_list#crontab)
 
+[curl - transfer a URL 下载上传数据](#docs/command_list#curl)
+
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
 [grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#grep)
