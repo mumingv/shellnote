@@ -155,7 +155,51 @@ curl -o /dev/null -s -w %{time_connect}:%{time_starttransfer}:%{time_total} 'htt
 
 ###  
 
+示例：求两个文件的交集、差集
 
+```
+$ cat test1
+美图
+女人
+美食
+家居
+健康
+两性
+情感
+星座命理
+育儿
+文化
+$ cat test2
+家居
+八卦
+情感
+```
+
+交集：
+```
+$ grep -F -f test1 test2
+家居
+情感
+```
+
+差集：test2 - test1
+```
+$ grep -F -v -f test1 test2   
+八卦
+```
+
+差集：test1 - test2
+```
+$ grep -F -v -f test2 test1
+美图
+女人
+美食
+健康
+两性
+星座命理
+育儿
+文化
+```
 
 
 ## kibitz
