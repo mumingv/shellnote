@@ -7,6 +7,7 @@
 |命令                                  |功能                                       |
 |--------------------------------------|-------------------------------------------|
 |[awk](#docs/command_list#awk)         |模式扫描处理                               |
+|[comm](#docs/command_list#comm)       |比较两个排好序的文件                       |
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
 |[sort](#docs/command_list#sort)       |对文本行进行排序                           |
 |[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                   |
@@ -29,6 +30,10 @@
 ## 命令列表
 
 [ab - Apache HTTP server benchmarking tool HTTP服务器性能测试](#docs/command_list#ab)
+
+[awk - awk - pattern scanning and processing language 模式扫描处理](#docs/command_list#awk)
+
+[comm - compare two sorted files line by line 文件比较](#docs/command_list#comm)
 
 [crontab - maintain crontab files for individual users 定时任务](#docs/command_list#crontab)
 
