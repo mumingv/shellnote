@@ -79,6 +79,34 @@ Percentage of the requests served within a certain time (ms)
 |Requests per second|每秒请求数，即：Web服务器的吞吐率。</br>计算公式：Complete requests / Time taken for tests  |
 
 
+## awk
+
+######  
+
+|参数名称           |参数含义                           |
+|-------------------|-----------------------------------|
+|-F fs              |指定分隔符                         |
+
+###  
+
+#### 示例：以空格作为分隔符，过滤第一列内容
+
+```
+$ cat input.txt 
+姓名 年龄 标签
+张三 23 愤青
+李四 21 文艺青年
+王五 18 学生
+```
+```
+$ awk -F ' ' '{print $1}' input.txt
+姓名
+张三
+李四
+王五
+```
+
+
 ## crontab
 
 ###    

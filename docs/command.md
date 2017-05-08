@@ -6,6 +6,7 @@
 
 |命令                                  |功能                                       |
 |--------------------------------------|-------------------------------------------|
+|[awk](#docs/command_list#awk)         |模式扫描处理                               |
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
 |[sort](#docs/command_list#sort)       |对文本行进行排序                           |
 |[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                   |
