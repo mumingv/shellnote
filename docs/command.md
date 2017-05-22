@@ -25,6 +25,7 @@
 |[pstack](#docs/command_list#pstack)    |查询线程堆栈信息                           |
 |[pstree](#docs/command_list#pstree)    |显示进程树                                 |
 |[strace](#docs/command_list#strace)    |跟踪系统调用和信号                         |
+|[time](#docs/command_list#time)        |统计命令执行的时间                         |
 
 
 ## 命令列表
@@ -60,6 +61,8 @@
 [strace - trace system calls and signals 跟踪系统调用和信号](#docs/command_list#strace)
 
 [tar - 打包目录和文件](#docs/command_list#tar)
+
+[time - time a simple command or give resource usage 统计命令执行的时间](#docs/command_list#time)
 
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)
 

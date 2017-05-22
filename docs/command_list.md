@@ -546,6 +546,21 @@ $ tar xvZf abc.tar.Z
 ```
 
 
+## time
+
+###  
+
+#### 示例：统计获取大搜检索接口数据所需的时间
+
+```
+$ time wget 'http://www.baidu.com/ns?ct=1&rn=10&ie=utf-8&rsv_bp=1&sr=0&cl=2&f=8&prevct=no&tn=json_webapp&word=刘德华'
+...
+real    0m0.119s
+user    0m0.002s
+sys     0m0.002s
+```
+
+
 ## tr
 
 ###  
