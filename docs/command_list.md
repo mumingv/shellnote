@@ -208,6 +208,8 @@ $ crontab -l
 |-s, --silent               |安静模式                           |
 |-o, --output <file>        |指定输出文件                       |
 |-w, --write-out <format>   |指定输出格式(如:时间)              |
+|--connect-timeout <seconds>|指定连接超时时间                   |
+|-m, --max-time <seconds>   |指定最大处理时间                   |
 
 ######  
 
@@ -226,6 +228,14 @@ curl -o /dev/null -s -w %{time_connect}:%{time_starttransfer}:%{time_total} 'htt
 ```
 ```
 0.001:1.002:1.002
+```
+
+
+#### 示例：设置超时时间，并且超时
+
+```
+$ curl --max-time 1 'http://123.56.21.232:8254/myprojects/demo/get_json_data.php'
+curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes received
 ```
 
 
