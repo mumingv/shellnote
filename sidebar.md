@@ -14,6 +14,7 @@
     - [基本正则表达式](#docs/regex_basic)
     - [扩展正则表达式](#docs/regex_extended)
     - [Perl正则表达式](#docs/regex_perl)
+    - [示例](#docs/regex_demo)
 0. [功能FAQ](#docs/funcpoint_faq)
 0. [参考资料](#docs/reference)
 
