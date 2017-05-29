@@ -21,6 +21,7 @@
 |---------------------------------------|-------------------------------------------|
 |[ab](#docs/command_list#ab)            |HTTP服务器性能测试                         |
 |[lsof](#docs/command_list#lsof)        |查询打开的文件                             |
+|[netstat](#docs/command_list#netstat)  |查询网络相关信息                           |
 |[ps](#docs/command_list#ps)            |查询进行信息                               |
 |[pstack](#docs/command_list#pstack)    |查询线程堆栈信息                           |
 |[pstree](#docs/command_list#pstree)    |显示进程树                                 |
@@ -49,6 +50,8 @@
 [ls - list directory contents 显示目录内容](#docs/command_list#ls)
 
 [lsof - list open files 查询打开的文件](#docs/command_list#lsof)
+
+[netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast member‐ships 查询网络相关信息](#docs/command_list#netstat)
 
 [ps - report a snapshot of the current processes 查询进程信息](#docs/command_list#ps)
 
