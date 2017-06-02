@@ -89,6 +89,14 @@ Percentage of the requests served within a certain time (ms)
 
 ###  
 
+#### 示例：统计平均耗时
+
+```
+$ head -4 access.log.2017060211 | awk -F ' ' 'BEGIN{sum=0} {sum+=$10} END{print sum, sum/NR}'  
+3131 782.75
+```
+
+
 #### 示例：以空格作为分隔符，过滤第一列内容
 
 ```

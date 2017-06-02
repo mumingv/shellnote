@@ -47,7 +47,7 @@ Linux的很多命令都支持正则表达式，常见的有：
     <tr>
         <td>awk</td>
         <td>扩展</td>
-        <td>awk '/pattern/ { statements }' file1 file2 ...</td>
+        <td>awk 'BEGIN { statements } pattern { statements } END { statements }' file1 file2 ...</td>
     </tr>
     <tr>
         <td>vim</td>
