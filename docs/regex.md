@@ -34,7 +34,7 @@ Linux的很多命令都支持正则表达式，常见的有：
     </tr>
     <tr>
         <td>基本(替换)</td>
-        <td>sed 's/pattern/g' file1 file2 ...</td>
+        <td>sed 's/pattern/replace/g' file1 file2 ...</td>
     </tr>
     <tr>
         <td>扩展</td>
