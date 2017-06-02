@@ -19,6 +19,10 @@
 0. [参考资料](#docs/reference)
 
 
+## 命令深入
+0. [awk](#docs/deepcmd_awk)
+
+
 ## 实例应用
 0. [数据抓取](#docs/demo_datacrawl)
 0. [数据库](#docs/demo_database)
