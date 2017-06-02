@@ -30,6 +30,7 @@
 
 ## 读书笔记
 0. [《Linx Shell脚本攻略》](#docs/book_scripting_cookbook)
+0. [《GNU Awk》](#docs/book_gawk)
 
 
 ## 附录 
