@@ -9,6 +9,7 @@
 |[awk](#docs/command_list#awk)         |模式扫描处理                               |
 |[comm](#docs/command_list#comm)       |比较两个排好序的文件                       |
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
+|[sed](#docs/command_list#sed)         |流式编辑器                                 |
 |[sort](#docs/command_list#sort)       |对文本行进行排序                           |
 |[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                   |
 
@@ -58,6 +59,8 @@
 [pstack - print a stack trace of a running process 查询线程堆栈信息](#docs/command_list#pstack)
 
 [pstree - display a tree of processes 显示进程树](#docs/command_list#pstree)
+
+[sed - stream editor for filtering and transforming text](#docs/command_list#sed)
 
 [sort - sort lines of text files 对文本行进行排序](#docs/command_list#sort)
 
