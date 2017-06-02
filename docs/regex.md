@@ -42,7 +42,7 @@ Linux的很多命令都支持正则表达式，常见的有：
     </tr>
     <tr>
         <td>扩展(替换)</td>
-        <td>sed -r 's/pattern/g' file1 file2 ...</td>
+        <td>sed -r 's/pattern/replace/g' file1 file2 ...</td>
     </tr>
     <tr>
         <td>awk</td>
@@ -52,7 +52,7 @@ Linux的很多命令都支持正则表达式，常见的有：
     <tr>
         <td>vim</td>
         <td>基本</td>
-        <td>:%s/pattern/new_string/gc</td>
+        <td>:%s/pattern/replace/gc</td>
     </tr>
 </table>
  
