@@ -36,6 +36,8 @@
 
 [awk - awk - pattern scanning and processing language 模式扫描处理](#docs/command_list#awk)
 
+[bash - GNU Bourne-Again SHell BASH可执行程序](#docs/command_list#bash)
+
 [comm - compare two sorted files line by line 文件比较](#docs/command_list#comm)
 
 [crontab - maintain crontab files for individual users 定时任务](#docs/command_list#crontab)
