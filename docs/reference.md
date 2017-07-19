@@ -8,5 +8,6 @@ awk: http://www.gnu.org/software/gawk/manual/gawk.html
 
 sed: http://www.gnu.org/software/sed/manual/sed.html
 
+Shell十三问：http://wiki.jikexueyuan.com/project/13-questions-of-shell/
 
 
