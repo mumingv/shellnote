@@ -549,9 +549,11 @@ test.sh: line 3: [: abc: unary operator expected
 
 ### 文件系统相关条件测试 `[]` `[[]]` `test`
 
+######    
+
 |文件系统相关测试    |含义|示例|
 |--------------------|----|----|
-|-f  |判断文件是否存在|[ -f ./check_root.sh ]|
+|-f|判断文件是否存在|[ -f ./check_root.sh ]|
 |-x|判断文件是否可执行|[ -x ./check_root.sh ]|
 |-d|判断是否是目录|[ -d ./ ]|
 |-e|判断是否是目录或文件|[ -e ./ ] 或 [ -e ./check_root.sh ]|
@@ -560,6 +562,7 @@ test.sh: line 3: [: abc: unary operator expected
 |-r|判断文件是否可读|[ -r ./check_root.sh ]|
 |-w|判断文件是否可写|[ -w ./check_root.sh ]|
 |-L|判断文件是否是一个符号链接|[ -L /dev/stdin ]|
+|-s|判断文件大小是否大于0|[ -s ./check_root.sh ]|
 
 
 ## 循环语句 `for` `while` `until`
