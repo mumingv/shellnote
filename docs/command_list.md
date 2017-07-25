@@ -356,6 +356,47 @@ Escape sequence is ^]
 ```
 
 
+## locale
+
+######  
+
+###  
+
+示例：显示当前配置的公共语言环境信息
+
+```
+$ locale
+LANG="zh_CN.UTF-8"
+LC_COLLATE="zh_CN.UTF-8"
+LC_CTYPE="zh_CN.UTF-8"
+LC_MESSAGES="zh_CN.UTF-8"
+LC_MONETARY="zh_CN.UTF-8"
+LC_NUMERIC="zh_CN.UTF-8"
+LC_TIME="zh_CN.UTF-8"
+LC_ALL=
+```
+
+示例：显示所有可用的公共语言环境名称
+
+```
+$ locale -a
+zh_CN
+zh_CN.eucCN
+zh_CN.GB18030
+zh_CN.GB2312
+zh_CN.GBK
+zh_CN.UTF-8
+zh_HK
+zh_HK.Big5HKSCS
+zh_HK.UTF-8
+zh_TW
+zh_TW.Big5
+zh_TW.UTF-8
+C
+POSIX
+```
+
+
 ## ls
 
 ######  

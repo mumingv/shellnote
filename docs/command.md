@@ -50,6 +50,8 @@
 
 [kibitz - allow two people to interact with one shell 师徒对话](#docs/command_list#kibitz)
 
+[locale - display locale settings 当前语言环境信息](#docs/command_list#locale)
+
 [ls - list directory contents 显示目录内容](#docs/command_list#ls)
 
 [lsof - list open files 查询打开的文件](#docs/command_list#lsof)
