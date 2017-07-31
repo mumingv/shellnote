@@ -22,6 +22,7 @@
 
 ## 命令深入
 0. [awk](#docs/deepcmd_awk)
+0. [sed](#docs/deepcmd_sed)
 
 
 ## 实例应用
