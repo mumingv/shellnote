@@ -78,6 +78,8 @@
 
 [watch - execute a program periodically, showing output fullscreen 定时执行程序并输出结果到终端](#docs/command_list#watch)
 
+[wc - print the number of newlines, words, and bytes in files 统计文件的行数、单词数和字节数](#docs/command_list#wc)
+
 [wget - The non-interactive network downloader 下载工具](#docs/command_list#wget)
 
 

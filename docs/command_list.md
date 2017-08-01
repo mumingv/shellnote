@@ -704,6 +704,19 @@ $ watch 'ls -1 | wc -l'
 </font>
 
 
+## wc
+
+######  
+
+###  
+
+#### 示例：统计文件中的行数（去除空行）
+
+```bash
+$ cat query.all | grep -v ^$ | wc -l
+```
+
+
 ## wget
 
 ######   
