@@ -4,14 +4,15 @@
 
 #### 
 
-|命令                                  |功能                                       |
+|命令                                  |功能                                        |
 |--------------------------------------|-------------------------------------------|
-|[awk](#docs/command_list#awk)         |模式扫描处理                               |
-|[comm](#docs/command_list#comm)       |比较两个排好序的文件                       |
-|[grep](#docs/command_list#grep)       |查找模式匹配的行                           |
-|[sed](#docs/command_list#sed)         |流式编辑器                                 |
-|[sort](#docs/command_list#sort)       |对文本行进行排序                           |
-|[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                   |
+|[awk](#docs/command_list#awk)         |模式扫描处理                                 |
+|[comm](#docs/command_list#comm)       |比较两个排好序的文件                          |
+|[cut](#docs/command_list#cut)         |列模式处理文本                       		   |
+|[grep](#docs/command_list#grep)       |查找模式匹配的行                             |
+|[sed](#docs/command_list#sed)         |流式编辑器                                  |
+|[sort](#docs/command_list#sort)       |对文本行进行排序                             |
+|[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                      |
 
 
 ## 开发调试
@@ -20,14 +21,14 @@
 
 |命令                                   |功能                                       |
 |---------------------------------------|-------------------------------------------|
-|[ab](#docs/command_list#ab)            |HTTP服务器性能测试                         |
-|[lsof](#docs/command_list#lsof)        |查询打开的文件                             |
-|[netstat](#docs/command_list#netstat)  |查询网络相关信息                           |
-|[ps](#docs/command_list#ps)            |查询进行信息                               |
-|[pstack](#docs/command_list#pstack)    |查询线程堆栈信息                           |
-|[pstree](#docs/command_list#pstree)    |显示进程树                                 |
-|[strace](#docs/command_list#strace)    |跟踪系统调用和信号                         |
-|[time](#docs/command_list#time)        |统计命令执行的时间                         |
+|[ab](#docs/command_list#ab)            |HTTP服务器性能测试                           |
+|[lsof](#docs/command_list#lsof)        |查询打开的文件                               |
+|[netstat](#docs/command_list#netstat)  |查询网络相关信息                             |
+|[ps](#docs/command_list#ps)            |查询进行信息                                |
+|[pstack](#docs/command_list#pstack)    |查询线程堆栈信息                             |
+|[pstree](#docs/command_list#pstree)    |显示进程树                                  |
+|[strace](#docs/command_list#strace)    |跟踪系统调用和信号                           |
+|[time](#docs/command_list#time)        |统计命令执行的时间                           |
 
 
 ## 命令列表
@@ -39,6 +40,8 @@
 [bash - GNU Bourne-Again SHell BASH可执行程序](#docs/command_list#bash)
 
 [comm - compare two sorted files line by line 文件比较](#docs/command_list#comm)
+
+[cut - remove sections from each line of files 列模式处理文本](#docs/command_list#cut)
 
 [crontab - maintain crontab files for individual users 定时任务](#docs/command_list#crontab)
 
