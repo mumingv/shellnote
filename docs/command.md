@@ -10,6 +10,7 @@
 |[comm](#docs/command_list#comm)       |比较两个排好序的文件                          |
 |[cut](#docs/command_list#cut)         |列模式处理文本                       		   |
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                             |
+|[jq](#docs/command_list#jq)		   |JSON处理器								  |
 |[sed](#docs/command_list#sed)         |流式编辑器                                  |
 |[sort](#docs/command_list#sort)       |对文本行进行排序                             |
 |[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                      |
@@ -50,6 +51,8 @@
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
 [grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#grep)
+
+[jq - Command-line JSON processor JSON处理器](#docs/command_list#jq)
 
 [kibitz - allow two people to interact with one shell 师徒对话](#docs/command_list#kibitz)
 

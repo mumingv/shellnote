@@ -224,7 +224,7 @@ $ comm -13 <(sort test1 | uniq) <(sort test2 | uniq)
 
 ###  
 
-#### 示例：截取从第9列及其之后的所有列
+#### 示例：截取从第9列及其之后的所有列（每列由空格分隔）
 
 ```
 $ cat file | cut -d' ' -f9-
@@ -333,6 +333,72 @@ $ grep -F -v -f test2 test1
 星座命理
 育儿
 文化
+```
+
+
+## jq
+
+前期：需要使用brew或yum安装。
+
+mac:
+
+```
+$ brew install jq
+```
+
+linux:
+
+```
+$ yum install jq
+```
+
+###  
+
+官方文档：https://stedolan.github.io/jq/manual/
+
+###  
+
+参考资料：http://www.rendoumi.com/linuxxia-ru-he-zai-ming-ling-xing-jie-xi-jsonwen-jian/
+
+###  
+
+#### 示例：查看格式化后的json数据
+
+```
+$ cat json.txt
+{"logid":"15020935445408","CUID":"yinjie05_debug_monitor","request_uid":"case_request_uid_20170807"}
+{"logid":"15020935445410","CUID":"test_debug_monitor","request_uid":"case_request_uid_test"}
+```
+```
+$ cat json.txt | jq .
+{
+  "logid": "15020935445408",
+  "CUID": "yinjie05_debug_monitor",
+  "request_uid": "case_request_uid_20170807"
+}
+{
+  "logid": "15020935445410",
+  "CUID": "test_debug_monitor",
+  "request_uid": "case_request_uid_test"
+}
+```
+
+
+#### 示例：提取logid字段的值
+
+```
+$ cat json.txt | jq '.logid'
+"15020935445408"
+"15020935445410"
+```
+
+
+#### 示例：提取logid字段的值，且结果中不显示引号
+
+```
+$ cat json.txt | jq -r '.logid'
+15020935445408
+15020935445410
 ```
 
 
