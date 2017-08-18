@@ -48,6 +48,8 @@
 
 [curl - transfer a URL 下载上传数据](#docs/command_list#curl)
 
+[date - print or set the system date and time 查询/设置日期和时间](#docs/command_list#date)
+
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
 [grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#grep)
@@ -61,6 +63,8 @@
 [ls - list directory contents 显示目录内容](#docs/command_list#ls)
 
 [lsof - list open files 查询打开的文件](#docs/command_list#lsof)
+
+[mutt - The Mutt Mail User Agent 邮件用户代理客户端](#docs/command_list#mutt)
 
 [netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast member‐ships 查询网络相关信息](#docs/command_list#netstat)
 

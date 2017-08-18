@@ -285,6 +285,79 @@ curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes re
 ```
 
 
+## date
+
+######  
+
+|参数名称                   |参数含义                           |
+|-------------------------|-----------------------------------|
+|-d, --date=STRING        |用字符串描述的时间，如：'yesterday'、'+1 days'  |
+
+### 
+
+#### 示例：根据字符串描述获取日期
+
+单词表示
+
+```
+date -d yesterday +%F
+```
+```
+date -d tomorrow +%F
+```
+
+next/last表示
+
+```
+date -d last-day +%F
+date -d 'last day' +%F
+date -d last-week +%F
+date -d 'last week' +%F
+date -d last-month +%F
+date -d 'last month' +%F
+date -d last-year +%F
+date -d 'last year' +%F
+```
+```
+date -d next-day +%F
+date -d 'next day' +%F 
+date -d next-week +%F 
+date -d 'next week' +%F 
+date -d next-month +%F 
+date -d 'next month' +%F 
+date -d next-year +%F 
+date -d 'next year' +%F 
+```
+
+正负数/ago表示(单位单复数的效果是一样的)
+
+```
+date -d '-1 day' +%F
+date -d '-1 days' +%F
+```
+```
+date -d '1 day ago' +%F
+date -d '1 days ago' +%F
+```
+```
+date -d '1 day' +%F
+date -d '1 days' +%F
+```
+```
+date -d '+1 day' +%F
+date -d '+1 days' +%F
+```
+
+基于指定日期的时间设置
+
+```
+date -d 'aug 16 -1 day' +%F
+```
+```
+date -d 'aug 16 1 day' +%F
+```
+
+
 ## grep
 
 ###  
@@ -526,6 +599,13 @@ COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
 ...
 a.out   17470 work    3r   REG  202,1        0  289936 /tmp/foo
 ```
+
+
+## mutt
+
+######    
+
+### 示例：待补充
 
 
 ## netstat 
