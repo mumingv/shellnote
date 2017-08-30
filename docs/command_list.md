@@ -358,6 +358,28 @@ date -d 'aug 16 1 day' +%F
 ```
 
 
+## find
+
+######  
+
+|参数名称                   |参数含义                           |
+|-------------------------|-----------------------------------|
+
+### 
+
+#### 查询当前目录下的所有子目录和文件
+
+<font color="red">
+说明：该方法列出的文件和目录是以绝对路径的形式显示的。
+</font>
+
+```
+$ find $PWD
+/Users/muming/Sites/shell/demo/datetime
+/Users/muming/Sites/shell/demo/datetime/date_loop.sh
+```
+
+
 ## grep
 
 ###  
@@ -472,6 +494,16 @@ $ cat json.txt | jq '.logid'
 $ cat json.txt | jq -r '.logid'
 15020935445408
 15020935445410
+```
+
+
+#### 示例：使用数组下标提取值
+
+```
+$ echo '[{"foo": 1}, {"bar": 2}]' | jq '.[1]'
+{
+  "bar": 2
+}
 ```
 
 

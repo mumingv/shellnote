@@ -80,6 +80,9 @@ Linux系统提供了一些特殊的变量，用于表达一些特别的含义。
 |$*|执行脚本或函数时的所有参数（"$1c$2c$3"，c为IFS的第一个字符）（相比$@而言用的较少）|
 |$$|当前Shell的进程ID（pid）|
 
+<font color="red">
+说明：$*和$@相同，但"$*" 和 "$@"(加引号)并不同，"$*"将所有的参数解释成一个字符串，而"$@"是一个参数数组。示例：[GitHub](https://github.com/mumingv/shell/commit/0e96ef2d616b47a21ad22181cc33885aa2416597)。
+</font>
 
 ##  函数
 
@@ -563,6 +566,28 @@ test.sh: line 3: [: abc: unary operator expected
 |-w|判断文件是否可写|[ -w ./check_root.sh ]|
 |-L|判断文件是否是一个符号链接|[ -L /dev/stdin ]|
 |-s|判断文件大小是否大于0|[ -s ./check_root.sh ]|
+
+
+## 分支语句 `case`
+
+### case ... in ... esac
+
+#### 语法
+
+```
+case $变量名称 in
+  "第一个变量内容")
+    程序段
+    ;;
+  "第二个变量内容")
+    程序段
+    ;;
+  *)
+    不包含第一个变量内容与第二个变量内容的其他程序运行段
+    exit 1
+    ;;
+esac
+```
 
 
 ## 循环语句 `for` `while` `until`
