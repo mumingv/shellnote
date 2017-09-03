@@ -139,6 +139,23 @@ $ date +%F.%T
 ```
 
 
+## 如何根据端口号查询进程可执行文件所在的目录？
+
+根据端口号（8183）查询到进程号（15386）。
+
+```
+$ netstat -tunlp | grep 8183
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+tcp 0 0 0.0.0.0:8183 0.0.0.0:* LISTEN 15386/nginx
+```
+
+根据进程号（15386）查询可执行程序的位置。
+```
+$ ps -ef | grep 15386
+work 15386 1 0 Sep02 ? 00:00:00 nginx: master process /home/work/odp/webserver/sbin/nginx
+```
+
 
 
 
