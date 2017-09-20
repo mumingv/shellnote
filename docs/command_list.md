@@ -233,7 +233,7 @@ $ cat file | cut -d' ' -f9-
 
 ## crontab
 
-###    
+###  
 
 #### 示例：设置定时任务，每10分钟执行一次
 
@@ -243,6 +243,13 @@ $ crontab -e
 $ crontab -l
 */10 * * * * sh /home/work/odp/app/audio/script/news/format_feed_category_dada_to_redis.sh online
 ```
+
+
+###  
+
+#### 参考资料
+
+http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 
 
 ## curl
@@ -295,15 +302,30 @@ curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes re
 
 ### 
 
+#### 示例：时间戳和日期互转
+
+日期转时间戳
+
+```
+date -d today +%s  # 1505890849
+```
+
+时间戳转日期
+
+```
+date -d @1505890849 +%F  # 2017-09-20
+```
+
+
 #### 示例：根据字符串描述获取日期
 
 单词表示
 
 ```
-date -d yesterday +%F
+date -d yesterday +%F  # 2017-09-19
 ```
 ```
-date -d tomorrow +%F
+date -d tomorrow +%F  # 2017-09-21
 ```
 
 next/last表示
