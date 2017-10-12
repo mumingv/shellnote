@@ -40,6 +40,8 @@
 
 [bash - GNU Bourne-Again SHell BASH可执行程序](#docs/command_list#bash)
 
+[cal - displays a calendar and the date of easter 查看日历](#docs/command_list#cal)
+
 [comm - compare two sorted files line by line 文件比较](#docs/command_list#comm)
 
 [cut - remove sections from each line of files 列模式处理文本](#docs/command_list#cut)
@@ -49,6 +51,8 @@
 [curl - transfer a URL 下载上传数据](#docs/command_list#curl)
 
 [date - print or set the system date and time 查询/设置日期和时间](#docs/command_list#date)
+
+[expr - evaluate expression 数学计算](#docs/command_list#expr)
 
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
