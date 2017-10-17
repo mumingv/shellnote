@@ -72,6 +72,8 @@
 
 [netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast member‐ships 查询网络相关信息](#docs/command_list#netstat)
 
+[open - open files and directories 打开文件或目录](#docs/command_list#open)
+
 [ps - report a snapshot of the current processes 查询进程信息](#docs/command_list#ps)
 
 [pstack - print a stack trace of a running process 查询线程堆栈信息](#docs/command_list#pstack)

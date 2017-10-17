@@ -689,9 +689,16 @@ drwxr-xr-x 2 root root 4096 Dec 16 01:25 .
 
 ## lsof
 
+######  
+
+|参数名称           |参数含义                           |
+|------------------|-----------------------------------|
+|-p               |根据进程ID列表查询进程对应的文件|
+|-i               |根据IP地址／端口号查询进程信息|
+
 ###  
 
-示例：根据进程ID查询该进程打开的文件。源码：[链接](https://github.com/mumingv/shell/tree/master/command/strace/testlsof)。
+#### 示例：根据进程ID查询该进程打开的文件。源码：[链接](https://github.com/mumingv/shell/tree/master/command/strace/testlsof)。
 
 ```
 $ ./a.out &
@@ -700,6 +707,17 @@ $ lsof -p 17470
 COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
 ...
 a.out   17470 work    3r   REG  202,1        0  289936 /tmp/foo
+```
+
+
+#### 示例：根据端口号查询进程信息
+
+```
+$ lsof -i:8181
+COMMAND PID     USER   FD   TYPE    DEVICE SIZE/OFF NODE NAME
+nginx   986 yinjie05    8u  IPv4 230185288     0t64  TCP *:8181 (LISTEN)
+nginx   987 yinjie05    8u  IPv4 230185288     0t64  TCP *:8181 (LISTEN)
+nginx   988 yinjie05    8u  IPv4 230185288     0t64  TCP *:8181 (LISTEN)
 ```
 
 
@@ -725,6 +743,17 @@ $ netstat -n | awk '/^tcp/'
 tcp        0      0 172.17.0.1:45138        172.17.0.1:1234         ESTABLISHED
 tcp        0      0 172.17.0.1:45140        172.17.0.1:1234         ESTABLISHED
 tcp        0      0 172.17.0.1:45136        172.17.0.1:1234         ESTABLISHED
+```
+
+
+## open
+
+### 示例：打开一个URL页面
+
+对于一个http网址，命令会自动在浏览器中打开该URL。
+
+```
+$ open http://localhost:8080
 ```
 
 
