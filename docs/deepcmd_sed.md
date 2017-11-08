@@ -46,3 +46,19 @@ $ echo '{"key":"zhanggang_debug_monitor","name":"sysprofile","type":"string","va
 $ find ./ -name '*.php' | xargs sed -i 's/insertTags/insertTagsWithQueryId/g'
 ```
 
+### 替换目录下所有文件中的某个字符串
+
+Linux环境下执行：
+
+```
+$ find . -type f -print0 | xargs -0 -I {} sed -i 's/标题/Mysql笔记/g' {}
+```
+
+有些Linux版本不支持xargs的-I参数，需要使用下面的命令。
+
+```
+$ find . -type f -print0 | xargs -0 --replace={} sed -i 's/streamFormat/stream_format/g' {}
+```
+
+注: Mac环境下该命令暂时不可用，待研究。
+
