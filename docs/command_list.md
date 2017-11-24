@@ -332,7 +332,7 @@ curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes re
 date -d today +%s  # 1505890849
 ```
 
-时间戳转日期
+时间戳转日期（仅Mac适用）
 
 ```
 date -d @1505890849 +%F  # 2017-09-20
