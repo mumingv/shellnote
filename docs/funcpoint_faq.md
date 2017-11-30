@@ -157,7 +157,22 @@ work 15386 1 0 Sep02 ? 00:00:00 nginx: master process /home/work/odp/webserver/s
 ```
 
 
+## 使用SecureCRT登录主机，一段时间后自动退出？
 
+提示错误信息：
+
+```
+timed out waiting for input: auto-logout
+```
+
+解决办法：设置用户的超时时间，该设置会覆盖系统的默认设置（默认设置在`/etc/profile`文件当中）。
+
+```
+$ vim ~/.bash_profile
+...
+export TMOUT=7200
+...
+```
 
 
 

@@ -84,6 +84,8 @@
 
 [sort - sort lines of text files 对文本行进行排序](#docs/command_list#sort)
 
+[stat - display file or filesystem status 查看文件的状态信息](#docs/command_list#stat)
+
 [strace - trace system calls and signals 跟踪系统调用和信号](#docs/command_list#strace)
 
 [tar - 打包目录和文件](#docs/command_list#tar)

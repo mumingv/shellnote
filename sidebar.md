@@ -23,8 +23,8 @@
 
 ## 命令深入
 0. [grep](#docs/deepcmd_grep)
-0. [awk](#docs/deepcmd_awk)
 0. [sed](#docs/deepcmd_sed)
+0. [awk](#docs/deepcmd_awk)
 
 
 ## 实例应用
@@ -35,6 +35,7 @@
 ## 读书笔记
 0. [《Linx Shell脚本攻略》](#docs/book_scripting_cookbook)
 0. [《GNU Awk》](#docs/book_gawk)
+0. [《精通正则表达式》](#docs/book_master_regex)
 
 
 ## 附录 
