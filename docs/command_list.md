@@ -975,6 +975,22 @@ $ tar xvZf abc.tar.Z
 ```
 
 
+### 
+
+#### 示例：压缩和解压多个目录
+
+```
+$ tar cvzf enrich.tar.gz enrich/actions/ enrich/models/ enrich/script/
+```
+```
+$ tar xvzf enrich.tar.gz
+$ ll
+drwxrwxr-x  5 mumingv mumingv  4096 Dec  3 11:39 enrich
+-rw-rw-r--  1 mumingv mumingv 77420 Dec  3 11:39 enrich.tar.gz
+```
+
+
+
 ## time
 
 ###  
