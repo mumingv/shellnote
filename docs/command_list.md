@@ -757,6 +757,24 @@ $ open http://localhost:8080
 ```
 
 
+## passwd
+
+###### 
+
+#### 示例：root用户登录，修改root密码
+
+```
+# passwd
+```
+
+
+#### 示例：root用户登录，修改work密码
+
+```
+# passwd work
+```
+
+
 ## ps
 
 ######  
@@ -1016,6 +1034,25 @@ sys     0m0.002s
 $ echo 'Hello world' | tr -d ' '
 Helloworld
 ```
+
+
+## useradd
+
+###### 
+
+|参数名称                    |参数含义                           |
+|---------------------------|---------------------------------|
+|-m                         |创建主目录                         |
+
+#### 示例：root用户登录，新增work账号，同时创建work账号的主目录
+
+```
+# useradd -m work
+```
+
+<font color="red">
+说明：新建的work账号主目录为/home/work。
+</font>
 
 
 ## watch

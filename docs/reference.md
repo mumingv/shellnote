@@ -2,6 +2,11 @@
 
 ###  
 
+书籍：《Linux命令行与shell脚本编程大全》
+
+线上：
+
+
 #### Shell参考
 
 Runoob：http://www.runoob.com/linux/linux-shell.html

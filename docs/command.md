@@ -74,6 +74,8 @@
 
 [open - open files and directories 打开文件或目录](#docs/command_list#open)
 
+[passwd - passwd - update a user’s authentication tokens(s) 设置密码](#docs/command_list#passwd)
+
 [ps - report a snapshot of the current processes 查询进程信息](#docs/command_list#ps)
 
 [pstack - print a stack trace of a running process 查询线程堆栈信息](#docs/command_list#pstack)
@@ -93,6 +95,8 @@
 [time - time a simple command or give resource usage 统计命令执行的时间](#docs/command_list#time)
 
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)
+
+[useradd - Create a new user or update default new user information 创建新用户](#docs/command_list#useradd)
 
 [watch - execute a program periodically, showing output fullscreen 定时执行程序并输出结果到终端](#docs/command_list#watch)
 

@@ -1,5 +1,10 @@
 # sed
 
+## 参考资料
+
+官方文档：http://www.gnu.org/software/sed/manual/sed.html
+
+
 ## 基本语法
 
 

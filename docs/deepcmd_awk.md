@@ -1,5 +1,10 @@
 # awk
 
+## 参考资料
+
+官方文档：http://www.gnu.org/software/gawk/manual/gawk.html
+
+
 ## 基本语法
 
 

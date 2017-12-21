@@ -36,6 +36,7 @@
 0. [《Linx Shell脚本攻略》](#docs/book_scripting_cookbook)
 0. [《GNU Awk》](#docs/book_gawk)
 0. [《精通正则表达式》](#docs/book_master_regex)
+0. [《Linux命令行与shell脚本编程大全》](#docs/book_linux_cmdline)
 
 
 ## 附录 
