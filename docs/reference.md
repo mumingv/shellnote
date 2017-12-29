@@ -2,10 +2,13 @@
 
 ###  
 
+#### 参考手册
+
 书籍：《Linux命令行与shell脚本编程大全》
 
-线上：
+线上：http://www.gnu.org/software/bash/manual/bash.html
 
+### 
 
 #### Shell参考
 

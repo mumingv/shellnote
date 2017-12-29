@@ -175,6 +175,20 @@ export TMOUT=7200
 ```
 
 
+## 如何在命令行中循环执行脚本？
 
+#### 示例：循环执行php脚本
 
+```
+$ while :; do php test.php; done;
+```
+
+<font color="red">
+说明：语法关键字后面要么跟空格，要么跟分号。while后面如果不携带一个空格的话，会报如下错误。
+</font>
+
+```
+$ while:; do php test.php; done; 
+bash: syntax error near unexpected token `do'
+```
 
