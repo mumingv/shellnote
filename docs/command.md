@@ -10,6 +10,7 @@
 |[comm](#docs/command_list#comm)       |比较两个排好序的文件                          |
 |[cut](#docs/command_list#cut)         |列模式处理文本                       		   |
 |[grep](#docs/command_list#grep)       |查找模式匹配的行                             |
+|[join](#docs/command_list#join)	   |根据指定字段连接两个文件的对应行				  |
 |[jq](#docs/command_list#jq)		   |JSON处理器								  |
 |[sed](#docs/command_list#sed)         |流式编辑器                                  |
 |[sort](#docs/command_list#sort)       |对文本行进行排序                             |
@@ -57,6 +58,8 @@
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
 [grep, egrep, fgrep - print lines matching a pattern 查找模式匹配的行](#docs/command_list#grep)
+
+[join - join lines of two files on a common field 根据指定字段连接两个文件的对应行](#docs/command_list#join)
 
 [jq - Command-line JSON processor JSON处理器](#docs/command_list#jq)
 

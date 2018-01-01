@@ -501,6 +501,34 @@ $ grep -F -v -f test2 test1
 ```
 
 
+## join
+
+#### 示例：连接用户的年龄和身高
+
+```
+$ cat age.txt
+张三 20
+李四 35
+王五 45
+$ cat height.txt
+张三 180
+李四 165
+王五 170
+```
+```
+$ LC_CTYPE=C join age.txt height.txt
+张三 20 180
+李四 35 165
+王五 45 170
+$ LC_ALL=C join height.txt age.txt
+张三 180 20
+李四 165 35
+王五 170 45
+```
+
+注：这里的`LC_ALL`也可以改用`LC_CTYPE`。
+
+
 ## jq
 
 前期：需要使用brew或yum安装。
