@@ -402,6 +402,26 @@ date -d 'aug 16 1 day' +%F
 ```
 
 
+## dd
+
+###### 
+
+|参数名称                   |参数含义                           |
+|-------------------------|-----------------------------------|
+|if                       |输入文件                             |
+|of                       |输出文件                             |
+|bs                       |块大小，单位：字节                     |
+|count                    |块数量                              |
+
+### 
+
+#### 示例：创建一个总大小1G的虚拟内存文件
+
+```
+# dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+```
+
+
 ## expr
 
 ###### 
@@ -425,6 +445,23 @@ expr 2 % 3   # 2
 
 ```
 expr `expr 2 + 3` \* 4  # 20
+```
+
+
+## fdisk
+
+###### 
+
+|参数名称                   |参数含义                           |
+|-------------------------|-----------------------------------|
+|-l                       |查询磁盘的分区表信息                  |
+
+### 
+
+#### 示例：查看所有磁盘，及其分区信息（使用root用户）
+
+```
+# fdisk -l
 ```
 
 
@@ -749,6 +786,70 @@ nginx   988 yinjie05    8u  IPv4 230185288     0t64  TCP *:8181 (LISTEN)
 ```
 
 
+#### 示例：查看所有进程监听的端口
+
+```
+$ lsof -i -P | grep -i 'listen'
+mysqld     486 muming   29u  IPv4 0x70a461ebf558de0d      0t0  TCP localhost:3306 (LISTEN)
+Thunder    496 muming   42u  IPv4 0x70a461ebfc5e762d      0t0  TCP *:49168 (LISTEN)
+Thunder    496 muming   65u  IPv4 0x70a461ebfc5e638d      0t0  TCP *:10000 (LISTEN)
+Thunder    496 muming   69u  IPv4 0x70a461ebfc5e6cdd      0t0  TCP *:10800 (LISTEN)
+QQ         534 muming   29u  IPv4 0x70a461ebf558cb6d      0t0  TCP localhost:4300 (LISTEN)
+QQ         534 muming   30u  IPv4 0x70a461ebf558b8cd      0t0  TCP localhost:4301 (LISTEN)
+```
+
+
+## mount
+
+######  
+
+|参数名称                   |参数含义                           |
+|-------------------------|-----------------------------------|
+|-t                       |指定文件系统类型                     |
+
+###  
+
+#### 示例：格式化并挂载一个文件系统
+
+查询硬盘（使用root账号）
+
+```
+# ll /dev/vd*
+brw-------  1 root root 253,  0 Nov  7 14:07 /dev/vda
+brw-------  1 root root 253,  1 Nov  7 14:07 /dev/vda1
+brw-------  1 root root 253, 16 Nov  7 14:07 /dev/vdb
+brw-------  1 root root 253, 32 Nov  7 14:07 /dev/vdc
+brw-------  1 root root 253, 48 Jan  4 10:36 /dev/vdd
+```
+
+格式化硬盘
+
+```
+# mkfs.ext4 /dev/vdd
+```
+
+创建目录并挂载硬盘
+
+```
+# mkdir -p /home/work/cloud-disk1
+# mount -t ext4 /dev/vdd /home/work/cloud-disk1
+```
+
+配置开机/重启自动挂载
+
+```
+# vim /etc/fstab
+...
+/dev/vdd        /home/work/cloud-disk1  ext4    defaults        0       0
+```
+
+修改访问权限
+
+```
+# chown -R work:work /home/work/cloud-disk1
+```
+
+
 ## mutt
 
 ######    
@@ -764,13 +865,35 @@ nginx   988 yinjie05    8u  IPv4 230185288     0t64  TCP *:8181 (LISTEN)
 |-------------------|-----------------------------------|
 |--numeric, -n      |主机名、端口号、用户名显示为数字格式, 默认为字母格式|
 
-### 示例：查询tcp连接信息(客户端、服务器的IP和端口号)
+### 
+
+####  示例：查询tcp连接信息(客户端、服务器的IP和端口号)
 
 ```shell
 $ netstat -n | awk '/^tcp/'
 tcp        0      0 172.17.0.1:45138        172.17.0.1:1234         ESTABLISHED
 tcp        0      0 172.17.0.1:45140        172.17.0.1:1234         ESTABLISHED
 tcp        0      0 172.17.0.1:45136        172.17.0.1:1234         ESTABLISHED
+```
+
+#### 示例：查看某个端口是否被占用
+
+Linux:
+
+```
+$ netstat -tunlp | grep 8181
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+tcp        0      0 0.0.0.0:8181                0.0.0.0:*                   LISTEN      25380/nginx 
+```
+
+Mac:
+
+```
+$ netstat -an | grep 8899
+tcp4       0      0  127.0.0.1.8899         127.0.0.1.64971        ESTABLISHED
+tcp4       0      0  127.0.0.1.64971        127.0.0.1.8899         ESTABLISHED
+tcp46      0      0  *.8899                 *.*                    LISTEN
 ```
 
 
@@ -984,6 +1107,54 @@ readlink("/proc/17755/fd/3", "/tmp/foo", 4096) = 8
 ```
 
 
+## swapon
+
+######  
+
+|参数名称           |参数含义                           |
+|-------------------|-----------------------------------|
+|-s                 |查看所有的虚拟内存                    |
+
+### 
+
+#### 示例：创建并挂载虚拟内存
+
+依次执行命令：`dd` -> `mkswap` -> `swapon`。
+
+```
+# dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+1024+0 records in
+1024+0 records out
+# mkswap /var/swap.1
+Setting up swapspace version 1, size = 1073737 kB
+# swapon /var/swap.1
+# swapon -s
+Filename                                Type            Size    Used    Priority
+/var/swap.1                             file            1048568 0       -1
+# free -m
+             total       used       free     shared    buffers     cached
+Mem:          3960       3823        136          0          6       1573
+-/+ buffers/cache:       2244       1715
+Swap:         1023          0       1023
+# vim /etc/fstab
+...
+/var/swap.1 swap swap defaults 0 0
+```
+
+## swapoff
+
+###### 
+
+### 
+
+#### 示例：卸载并删除虚拟内存
+
+```
+# swapoff /var/swap.1
+# rm -f /var/swap.1
+```
+
+
 ## tar
 
 ### 不同格式的压缩和解压方法
@@ -1071,6 +1242,8 @@ Helloworld
 |参数名称                    |参数含义                           |
 |---------------------------|---------------------------------|
 |-m                         |创建主目录                         |
+|-G                         |指定用户所属的用户组                 |
+|-s                         |指定登录shell                 |
 
 #### 示例：root用户登录，新增work账号，同时创建work账号的主目录
 
@@ -1081,6 +1254,12 @@ Helloworld
 <font color="red">
 说明：新建的work账号主目录为/home/work。
 </font>
+
+#### 示例：使用root账号，创建一个名为hadoop的用户，指定主目录、所属用户组和登录shell
+
+```
+# useradd -m hadoop -G root -s /bin/bash
+```
 
 
 ## watch

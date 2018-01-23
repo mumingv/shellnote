@@ -33,6 +33,17 @@
 |[time](#docs/command_list#time)        |统计命令执行的时间                           |
 
 
+## 系统设置
+
+#### 
+
+|命令                                   |功能                                       |
+|---------------------------------------|-------------------------------------------|
+|[dd](#docs/command_list#dd)    		|复制转换一个文件                       |
+|[swapon](#docs/command_list#swapon)    |打开虚拟内存                           |
+|[swapoff](#docs/command_list#swapoff)  |关闭虚拟内存                           |
+
+
 ## 命令列表
 
 [ab - Apache HTTP server benchmarking tool HTTP服务器性能测试](#docs/command_list#ab)
@@ -53,7 +64,11 @@
 
 [date - print or set the system date and time 查询/设置日期和时间](#docs/command_list#date)
 
+[dd - convert and copy a file 复制转换一个文件](#docs/command_list#dd)
+
 [expr - evaluate expression 数学计算](#docs/command_list#expr)
+
+[fdisk - Partition table manipulator for Linux 磁盘分区](#docs/command_list#fdisk)
 
 [find - search for files in a directory hierarchy 查找文件](#docs/command_list#find)
 
@@ -70,6 +85,8 @@
 [ls - list directory contents 显示目录内容](#docs/command_list#ls)
 
 [lsof - list open files 查询打开的文件](#docs/command_list#lsof)
+
+[mount - mount a file system 挂载文件系统](#docs/command_list#mount)
 
 [mutt - The Mutt Mail User Agent 邮件用户代理客户端](#docs/command_list#mutt)
 
@@ -92,6 +109,10 @@
 [stat - display file or filesystem status 查看文件的状态信息](#docs/command_list#stat)
 
 [strace - trace system calls and signals 跟踪系统调用和信号](#docs/command_list#strace)
+
+[swapon - enable devices and files for paging and swapping 打开虚拟内存](#docs/command_list#swapon)
+
+[swapoff - disable devices and files for paging and swapping 关闭虚拟内存](#docs/command_list#swapoff)
 
 [tar - 打包目录和文件](#docs/command_list#tar)
 
