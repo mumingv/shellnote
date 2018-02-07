@@ -19,6 +19,7 @@
     - [扩展正则表达式 (ERE)](#docs/regex_extended)
     - [Perl正则表达式 (PCRE)](#docs/regex_perl)
     - [示例](#docs/regex_demo)
+    - [参考资料](#docs/regex_reference)
 0. [语法FAQ](#docs/syntax_faq)
 0. [功能FAQ](#docs/funcpoint_faq)
 0. [示例](#docs/demo)
