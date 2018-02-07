@@ -324,6 +324,14 @@ curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes re
 
 ### 
 
+#### 示例：获取系统当前时间戳
+
+```
+$ date +%s
+1517822372
+```
+
+
 #### 示例：时间戳和日期互转
 
 日期转时间戳
@@ -1065,6 +1073,7 @@ $ cat news_query.txt | head -n 10 | sort -t$'\t' -k2 -nr
 商河爆炸        6       0       0       0       0       0       6       5
 ```
 
+
 ## stat
 
 ###### 
@@ -1074,14 +1083,22 @@ $ cat news_query.txt | head -n 10 | sort -t$'\t' -k2 -nr
 #### 示例：查看文件的修改时间
 
 ```
-$ stat smarttv_timely_dict_20171128.txt
-  File: `smarttv_timely_dict_20171128.txt'
+$ stat file.txt
+  File: `file.txt'
   Size: 25122           Blocks: 56         IO Block: 4096   regular file
 Device: fd10h/64784d    Inode: 4292975     Links: 1
 Access: (0664/-rw-rw-r--)  Uid: (  503/yinjie)   Gid: (  505/yinjie)
 Access: 2017-11-30 10:11:17.000000000 +0800
 Modify: 2017-11-30 10:09:39.000000000 +0800
 Change: 2017-11-30 10:09:39.000000000 +0800
+```
+
+
+#### 示例：获取文件Last Change对应的时间戳
+
+```
+$ stat -c %Z file.txt 
+1517823093
 ```
 
 
