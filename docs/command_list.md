@@ -285,6 +285,10 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 |-w, --write-out <format>   |指定输出格式(如:时间)              |
 |--connect-timeout <seconds>|指定连接超时时间                   |
 |-m, --max-time <seconds>   |指定最大处理时间                   |
+|-i, --include              |在响应结果中返回头信息                   |
+|-H , --header <header>     |指定Http头参数，如：'Content-Type: application/json'|
+|-X, --request <command>    |指定请求方法，如：GET, POST, PUT, DELETE等|
+
 
 ######  
 
