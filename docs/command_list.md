@@ -285,7 +285,8 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 |-w, --write-out <format>   |指定输出格式(如:时间)              |
 |--connect-timeout <seconds>|指定连接超时时间                   |
 |-m, --max-time <seconds>   |指定最大处理时间                   |
-|-i, --include              |在响应结果中返回头信息                   |
+|-i, --include              |在响应结果中返回头信息              |
+|-k, --insecure             |允许连接到 SSL 站点，而不使用证书    |
 |-H , --header <header>     |指定Http头参数，如：'Content-Type: application/json'|
 |-X, --request <command>    |指定请求方法，如：GET, POST, PUT, DELETE等|
 
@@ -316,6 +317,11 @@ curl -o /dev/null -s -w %{time_connect}:%{time_starttransfer}:%{time_total} 'htt
 $ curl --max-time 1 'http://123.56.21.232:8254/myprojects/demo/get_json_data.php'
 curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes received
 ```
+
+
+#### 参考资料
+
+https://itbilu.com/linux/man/4yZ9qH_7X.html
 
 
 ## date

@@ -56,6 +56,10 @@ $ find ./ -name '*.php' | xargs sed -i 's/insertTags/insertTagsWithQueryId/g'
 Linux环境下执行：
 
 ```
+$ find . -type f -print0 | xargs -0 sed -i 's/标题/Mysql笔记/g'
+```
+or
+```
 $ find . -type f -print0 | xargs -0 -I {} sed -i 's/标题/Mysql笔记/g' {}
 ```
 
