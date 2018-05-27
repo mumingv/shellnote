@@ -192,3 +192,10 @@ $ while:; do php test.php; done;
 bash: syntax error near unexpected token `do'
 ```
 
+
+#### 示例：杀掉某个范围的所有pid
+
+```
+$ pid=12062; while (( $pid < 12189 )); do kill -9 $pid; ((pid=$pid+1)); done;
+```
+

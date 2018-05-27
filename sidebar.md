@@ -11,9 +11,9 @@
 0. [Linux 命令列表](#docs/command_list)
 0. [Shell 基本语法](#docs/syntax)
 0. [Shell 扩展语法](#docs/syntax_ex)
+0. [Shell 常量&变量](#docs/constant)
 0. [Shell 关键字](#docs/keyword)
 0. [Shell 函数](#docs/function)
-0. [Shell 常量](#docs/constant)
 0. [正则表达式](#docs/regex)
     - [基本正则表达式 (BRE)](#docs/regex_basic)
     - [扩展正则表达式 (ERE)](#docs/regex_extended)
@@ -38,10 +38,11 @@
 
 
 ## 读书笔记
-0. [《Linx Shell脚本攻略》](#docs/book_scripting_cookbook)
-0. [《GNU Awk》](#docs/book_gawk)
-0. [《精通正则表达式》](#docs/book_master_regex)
-0. [《Linux命令行与shell脚本编程大全》](#docs/book_linux_cmdline)
+0. [《官方Bash参考手册》](#docs/book/book_bash_reference_manual)
+0. [《Linx Shell脚本攻略》](#docs/book/book_scripting_cookbook)
+0. [《GNU Awk》](#docs/book/book_gawk)
+0. [《精通正则表达式》](#docs/book/book_master_regex)
+0. [《Linux命令行与shell脚本编程大全》](#docs/book/book_linux_cmdline)
 
 
 ## 附录 
