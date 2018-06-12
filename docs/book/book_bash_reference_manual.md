@@ -150,7 +150,28 @@ select name [in words …]; do commands; done
 
 ### 3.3 Shell Functions 函数
 
+语法示例：
 
+```
+function name() {
+	...
+}
+```
+
+
+### 3.4 Shell Parameters
+
+#### 3.4.1 Positional Parameters
+
+略。
+
+
+#### 3.4.2 Special Parameters
+
+略。
+
+
+### 3.5 Shell Expansions
 
 
 

@@ -14,6 +14,7 @@
 0. [Shell 常量&变量](#docs/constant)
 0. [Shell 关键字](#docs/keyword)
 0. [Shell 函数](#docs/function)
+0. [Shell 表达式汇总](#docs/expression)
 0. [正则表达式](#docs/regex)
     - [基本正则表达式 (BRE)](#docs/regex_basic)
     - [扩展正则表达式 (ERE)](#docs/regex_extended)
