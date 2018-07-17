@@ -286,17 +286,71 @@ $(< file)
 ```
 
 
+#### 3.5.5 Arithmetic Expansion 算术扩展
+
+语法形式：
+
+```
+$(( expression ))
+```
+
+示例：有没有空格都可以
+
+```
+$ abc=$(( 1+2 ))
+$ echo $abc
+3
+```
+```
+$ abc=$((1+2))
+$ echo $abc
+3
+```
+
+
+#### 3.5.6 Process Substitution 进程替换
+
+语法形式：`<(list)`可以看做一个临时文件
+
+1. 把list的输出作为一个临时文件，作为command的参数
+
+```
+command <(list)
+```
+
+2. 把command的输出到临时文件，临时文件作为list的输入
+```
+command >(list)
+```
+
+示例：[参考](#docs/command_list#comm)
 
 
 
+#### 3.5.7 Word Splitting 分词
+
+Shell在分词时会跳过那些被双引号包围的词。
+
+参考：
+
+- [Here String 中不该进行分词](http://www.cnblogs.com/ziyunfei/p/4781553.html)
+- [再谈 $* 和 $@ 在 Bash 中的表现](http://www.cnblogs.com/ziyunfei/p/4808530.html)
+
+
+#### 3.5.8 Filename Expansion 文件名展开
+
+参考：
+
+- [bash之通配符](https://blog.csdn.net/astrotycoon/article/details/50814031)
 
 
 
+#### 3.5.9 Quote Removal 引用去除
+
+略。
 
 
-
-
-
+### 3.6 Redirections 重定向
 
 
 
