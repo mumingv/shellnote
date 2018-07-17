@@ -159,32 +159,131 @@ function name() {
 ```
 
 
-### 3.4 Shell Parameters
+### 3.4 Shell Parameters 参数
 
-#### 3.4.1 Positional Parameters
+#### 3.4.1 Positional Parameters 位置参数
 
-略。
-
-
-#### 3.4.2 Special Parameters
-
-略。
+`${N}`或`$N`。
 
 
-### 3.5 Shell Expansions
+#### 3.4.2 Special Parameters 特殊参数
+
+`$*`、`$@`、`$#`、`$?`、`$-`、`$$`、`$!`、`$0`、`$_`。
 
 
+### 3.5 Shell Expansions 扩展
+
+#### 3.5.1 Brace Expansion 大括号扩展
 
 
+```
+bash$ echo a{d,c,b}e
+ade ace abe
+```
+
+```
+mkdir /usr/local/src/bash/{old,new,dist,bugs}
+```
+
+```
+chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
+```
 
 
+#### 3.5.2 Tilde Expansion 波浪号扩展
+
+`~root`表示用户root的根目录。
+
+```
+$ echo ~root/foo
+/var/root/foo
+```
+
+参考资料：
+- [CSDN：bash之波浪号扩展（tilde expansion）](https://blog.csdn.net/astrotycoon/article/details/78109809)
 
 
+#### 3.5.3 Shell Parameter Expansion 参数扩展
+
+##### 参数替换
+
+|语法 					|含义 										|
+|-----------------------|-------------------------------------------|
+|${parameter} 			|变量parameter的值 							|
+|${parameter:-word} 	|变量parameter有值，则取其值；否则取"word"		|
+|${parameter:=word}		|变量parameter有值，则取其值；否则将"word"赋值给变量parameter，并取其值 	|
+|${parameter:?word}		|变量parameter有值，则取其值；否则将"word"输出到标准错误（如果是非交互模式，则直接退出） 	|
+|${parameter:+word}		|变量parameter有值，则取"word"；否则取空 		|
 
 
+##### 字符串操作
+
+|语法 					|含义 										|
+|-----------------------|-------------------------------------------|
+|${parameter:offset}</br>${parameter:offset:length}|获取子字符串 		|
+|${#parameter}			|字符串长度 									|
 
 
+##### 变量匹配
 
+|语法 					|含义 										|
+|-----------------------|-------------------------------------------|
+|${!prefix*}</br>${!prefix@}|所有以prefix开头的变量名称 				|
+
+
+##### 数组操作
+
+|语法 					|含义 										|
+|-----------------------|-------------------------------------------|
+|${array[index]}		|数组下标为index的元素值 						|
+|${array[@]}</br>${array[*]}|数组的所有元素值 							|
+|${!array[@]}</br>${!array[*]}|数组的所有下标 							|
+|${#array[@]}</br>${#array[*]}|数组的大小（元素个数）					|
+
+
+##### 正则匹配替换
+
+|语法 					|含义 										|
+|-----------------------|-------------------------------------------|
+|${parameter#word}		|将parameter中首部与word匹配的部分截除，使用最短匹配	|
+|${parameter##word} 	|将parameter中首部与word匹配的部分截除，使用最长匹配	|
+|${parameter%word}		|将parameter中尾部与word匹配的部分截除，使用最短匹配	|
+|${parameter%%word} 	|将parameter中尾部与word匹配的部分截除，使用最长匹配	|
+|${parameter/pattern/string} 	|将parameter中与patterm匹配的部分，使用string进行替换		|
+|${parameter^pattern}	|把parameter中的第一个字符换成大写（Mac不支持）	|
+|${parameter^^pattern}	|把parameter中的所有字符换成大写（Mac不支持）		|
+|${parameter,pattern} 	|把parameter中的第一个字符换成小写（Mac不支持）	|
+|${parameter,,pattern}	|把parameter中的所有字符换成小写（Mac不支持）		|
+|${parameter@operator}	|把parameter的值进行一些转换  			  		|
+
+
+##### 
+
+参考资料：
+- [CSDN: bash之参数扩展（Parameter Expansion）](https://blog.csdn.net/astrotycoon/article/details/78109827)
+- [Bash 4.4 中新增的 ${parameter@operator} 语法](https://www.cnblogs.com/ziyunfei/p/4918675.html)
+
+
+#### 3.5.4 Command Substitution 命令替换
+
+语法形式：
+
+```
+$(command)
+```
+
+或
+
+```
+`command`
+```
+
+注：如下两种示例等价。
+
+```
+$(cat file)
+$(< file)
+```
 
 
 

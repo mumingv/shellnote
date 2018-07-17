@@ -319,6 +319,13 @@ curl: (28) Operation timed out after 1001 milliseconds with 0 out of -1 bytes re
 ```
 
 
+#### 示例：携带cookie
+
+```
+curl -X GET 'http://ip:port/record?action=list&page=1&page_size=1' -b OSSID=95c750d7de890f802ddbc094986d4321
+```
+
+
 #### 参考资料
 
 https://itbilu.com/linux/man/4yZ9qH_7X.html

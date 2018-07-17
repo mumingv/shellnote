@@ -44,6 +44,17 @@
 |[swapoff](#docs/command_list#swapoff)  |关闭虚拟内存                           |
 
 
+## 其他
+
+#### 
+
+|命令                                   |功能                                       |
+|---------------------------------------|-------------------------------------------|
+|dirs 									|显示当前记忆目录（包含目录栈中的目录）   			|
+|pushd 									|将目录加入目录栈 								|
+|popd 									|将目录弹出目录栈								|
+
+
 ## 命令列表
 
 [ab - Apache HTTP server benchmarking tool HTTP服务器性能测试](#docs/command_list#ab)
