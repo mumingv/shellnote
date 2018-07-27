@@ -352,8 +352,165 @@ Shell在分词时会跳过那些被双引号包围的词。
 
 ### 3.6 Redirections 重定向
 
+`<&n`与`0<&n`含义相同，表示将文件描述符n的内容复制到stdin。
+
+`<&-`与`0<&-`含义相同，表示关闭stdin。
+
+`>&-`与`1>&-`含义相同，表示关闭stdout。
 
 
+#### 3.6.1 Redirecting Input 输入重定向
+
+```
+[n]<word
+```
+
+其中，n默认值为0（stdin）。
+
+
+#### 3.6.2 Redirecting Output 输出重定向
+
+```
+[n]>[|]word
+```
+
+`noclobber`选项用户防止重定向将已有的文件覆盖。使用如下方式打开或关闭。
+
+```
+set -o noclobber  # 打开选项
+set +o noclobber  # 关闭选项
+```
+
+`>|`则无视noclobber选项的存在。
+
+示例：
+
+```
+$ echo 'aaa' > file.txt
+$ echo 'bbb' > file.txt
+$ set -o noclobber
+$ echo 'ccc' > file.txt
+-bash: file.txt: cannot overwrite existing file
+$ echo 'ccc' >| file.txt
+$ cat file.txt
+ccc
+```
+
+##### 参考资料
+
+- [noclobber：避免文件的重写](http://blog.51cto.com/tech110/232312)
+
+
+#### 3.6.3 Appending Redirected Output 附加输出重定向
+
+```
+[n]>>word
+```
+
+与`[n]>word`相比，`[n]>>word`不覆盖原有文件，而是采用追加的方式写入。
+
+
+#### 3.6.4 Redirecting Standard Output and Standard Error 标准输出和标准错误同时重定向
+
+```
+&>word
+```
+```
+>&word
+```
+
+以上两种方式等价于：
+
+```
+>word 2>&1
+```
+
+
+#### 3.6.5 Appending Standard Output and Standard Error 附加标准输出和标准错误同时重定向
+
+```
+&>>word
+```
+
+以上方式等价于：
+
+```
+>>word 2>&1
+```
+
+
+#### 3.6.6 Here Documents Here文档
+
+```
+[n]<<[-]word
+        here-document
+delimiter
+```
+
+示例：将Here文档内容输出到文件(output.sh)
+
+```
+cat << EOF > output.sh
+echo "hello"
+echo "world"
+EOF
+```
+
+`<<-`与`<<`相比，`<<-`会把Here文档每行前面的TAB制表符删除掉。
+
+
+##### 参考资料
+
+- [linux shell 的here document 用法 (cat << EOF)](https://my.oschina.net/u/1032146/blog/146941)
+
+
+#### 3.6.7 Here Strings Here字符串
+
+```
+[n]<<< word
+```
+
+示例：
+
+```
+$ tr a-z A-Z <<<"Yes it is a string"
+YES IT IS A STRING
+```
+
+###### 参考资料
+
+- [Here文档](https://zh.wikipedia.org/wiki/Here%E6%96%87%E6%A1%A3)
+
+
+#### 3.6.8 Duplicating File Descriptors 复制文件描述符
+
+```
+[n]<&word
+```
+
+```
+[n]>&word
+```
+
+说明：`>&word`等价于`>word 2>&1`，是复制文件描述符的一种特殊场景。
+
+
+#### 3.6.9 Moving File Descriptors 移除文件描述符
+
+```
+[n]<&digit-
+```
+
+```
+[n]>&digit-
+```
+
+
+#### 3.6.10 Opening File Descriptors for Reading and Writing 打开文件描述符进行读写
+
+```
+[n]<>word
+```
 
 
 
