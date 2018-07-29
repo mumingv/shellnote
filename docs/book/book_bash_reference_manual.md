@@ -513,8 +513,456 @@ YES IT IS A STRING
 ```
 
 
+### 3.7 Executing Commands 执行命令
+
+#### 3.7.1 Simple Command Expansion 简单命令扩展
+
+略。
+
+
+#### 3.7.2 Command Search and Execution 命令搜索和执行
+
+略。
+
+
+#### 3.7.3 Command Execution Environment 命令执行环境
+
+略。
+
+
+#### 3.7.4 Environment 环境
+
+略。
+
+
+#### 3.7.5 Exit Status 退出状态
+
+略。
+
+
+#### 3.7.6 Signals 信号
+
+略。
+
+
+#### 3.8 Shell Scripts Shell脚本
+
+略。
+
+
+### 4 Shell Builtin Commands Shell内建命令
+
+#### 4.1 Bourne Shell Builtins Bsh内建命令
+
+##### 冒号（:）
+
+```
+: [arguments]
+```
+
+参考资料
+
+- [Shell内建命令之冒号](https://blog.csdn.net/ieearth/article/details/52589020)
+
+
+##### 点号（.）
+
+```
+. filename [arguments]
+```
+
+
+##### break
+
+```
+break [n]
+```
+
+
+##### cd
+
+```
+cd [-L|[-P [-e]] [-@] [directory]
+```
+
+
+##### continue
+
+```
+continue [n]
+```
+
+
+##### eval
+
+```
+eval [arguments]
+```
+
+
+##### exec
+
+```
+exec [-cl] [-a name] [command [arguments]]
+```
+
+
+##### exit
+
+```
+exit [n]
+```
+
+
+##### export
+
+```
+export [-fn] [-p] [name[=value]]
+```
+
+
+##### getopts 获取位置参数
+
+```
+getopts optstring name [args]
+```
+
+
+##### hash
+
+```
+hash [-r] [-p filename] [-dt] [name]
+```
+
+参考资料
+
+- [Shell内建命令之hash](https://blog.csdn.net/ieearth/article/details/52599900)
 
 
 
+##### pwd
+
+```
+pwd [-LP]
+```
+
+
+##### readonly
+
+
+##### return
+
+
+##### shift
+
+
+##### test
+
+
+##### times
+
+
+##### trap
+
+
+##### umask
+
+
+##### unset
+
+
+#### 4.2 Bash Builtin Commands Bash内建命令
+
+##### alias
+
+```
+alias [-p] [name[=value] …]
+```
+
+
+##### bind
+
+```
+bind [-m keymap] [-lpsvPSVX]
+bind [-m keymap] [-q function] [-u function] [-r keyseq]
+bind [-m keymap] -f filename
+bind [-m keymap] -x keyseq:shell-command
+bind [-m keymap] keyseq:function-name
+bind [-m keymap] keyseq:readline-command
+```
+
+
+##### builtin
+
+```
+builtin [shell-builtin [args]]
+```
+
+
+##### caller
+
+
+##### command
+
+
+##### declare
+
+```
+declare [-aAfFgilnrtux] [-p] [name[=value] …]
+```
+
+
+##### echo
+
+```
+echo [-neE] [arg …]
+```
+
+##### enable
+
+
+##### help
+
+
+##### let
+
+
+##### local
+
+
+##### logout
+
+
+##### mapfile
+
+
+##### printf
+
+
+##### read
+
+
+##### readarray
+
+
+##### source
+
+
+##### type
+
+
+##### typeset
+
+
+##### ulimit
+
+
+##### unalias
+
+
+### 4.3 Modifying Shell Behavior 修改Shell行为
+
+#### 4.3.1 The Set Builtin
+
+```
+set [--abefhkmnptuvxBCEHPT] [-o option-name] [argument …]
+set [+abefhkmnptuvxBCEHPT] [+o option-name] [argument …]
+```
+
+
+#### 4.3.2 The Shopt Builtin
+
+
+### 4.4 Special Builtins 特殊的内建命令
+
+
+## 5 Shell Variables Shell变量
+
+略。
+
+
+## 6 Bash Features Bash特性
+
+### 6.1 Invoking Bash
+
+
+### 6.2 Bash Startup Files
+
+
+### 6.3 Interactive Shells
+
+#### 6.3.1 What is an Interactive Shell?
+
+略。
+
+#### 6.3.2 Is this Shell Interactive?
+
+略。
+
+#### 6.3.3 Interactive Shell Behavior
+
+略。
+
+
+### 6.4 Bash Conditional Expressions Bash条件表达式
+
+
+### 6.5 Shell Arithmetic 算术运算
+
+略。
+
+
+### 6.6 Aliases 别名
+
+略。
+
+
+### 6.7 Arrays 数组
+
+略。
+
+
+### 6.8 The Directory Stack 目录栈
+
+#### 6.8.1 Directory Stack Builtins
+
+略。
+
+
+### 6.9 Controlling the Prompt 控制提示
+
+
+### 6.10 The Restricted Shell
+
+
+### 6.11 Bash POSIX Mode
+
+
+## 7 Job Control 任务控制
+
+### 7.1 Job Control Basics 任务控制基础
+
+
+### 7.2 Job Control Builtins 任务控制内建命令
+
+#### bg
+
+
+#### fg
+
+
+#### jobs
+
+
+#### kill
+
+
+#### wait
+
+
+#### disown
+
+
+#### suspend
+
+
+### 7.3 Job Control Variables 任务控制变量
+
+#### auto_resume
+
+
+## 8 Command Line Editing 命令行编辑
+
+### 8.1 Introduction to Line Editing
+
+
+### 8.2 Readline Interaction
+
+
+### 8.3 Readline Init File
+
+
+### 8.4 Bindable Readline Commands
+
+#### 8.4.1 Commands For Moving 移动命令
+
+###### 
+|命令           |作用                       |
+|---------------|---------------------------|
+|C-a            |行首                       |
+|C-e            |行尾                       |
+|C-f            |向前移动一个字符           |
+|C-b            |向后移动一个字符           |
+|M-f            |向前移动一个单词（M默认为esc键，iterm2改为了option键）|
+|M-b            |向后移动一个单词（M默认为esc键，iterm2改为了option键）|
+|C-l            |清除屏幕，保留当前命令行   |
+
+
+#### 8.4.2 Commands For Manipulating The History 维护历史命令
+
+
+#### 8.4.3 Commands For Changing Text 改变文本命令
+
+
+#### 8.4.4 Killing And Yanking 
+
+
+#### 8.4.5 Specifying Numeric Arguments
+
+
+#### 8.4.6 Letting Readline Type For You
+
+
+#### 8.4.7 Keyboard Macros
+
+
+#### 8.4.8 Some Miscellaneous Commands 混合命令
+
+
+### 8.5 Readline vi Mode
+
+
+### 8.6 Programmable Completion
+
+
+### 8.7 Programmable Completion Builtins
+
+
+### 8.8 A Programmable Completion Example
+
+
+## 9 Using History Interactively
+
+
+## 10 Installing Bash
+
+
+## Appendix A Reporting Bugs
+
+略。
+
+## Appendix B Major Differences From The Bourne Shell
+
+略。
+
+## Appendix C GNU Free Documentation License
+
+略。
+
+## Appendix D Indexes 索引附录
+
+## D.1 Index of Shell Builtin Commands Shell内建命令索引
+
+
+## D.2 Index of Shell Reserved Words Shell保留字索引
+
+
+## D.3 Parameter and Variable Index 参数和变量索引
+
+
+## D.4 Function Index 函数索引
+
+
+## D.5 Concept Index 概念索引
 
 
