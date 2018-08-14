@@ -281,6 +281,7 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 |参数名称                   |参数含义                           |
 |---------------------------|-----------------------------------|
 |-s, --silent               |安静模式                           |
+|-S, --show-error           |安静模式下显示错误                 |
 |-o, --output <file>        |指定输出文件                       |
 |-w, --write-out <format>   |指定输出格式(如:时间)              |
 |--connect-timeout <seconds>|指定连接超时时间                   |
