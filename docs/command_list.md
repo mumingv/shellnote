@@ -290,6 +290,8 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 |-k, --insecure             |允许连接到 SSL 站点，而不使用证书    |
 |-H , --header <header>     |指定Http头参数，如：'Content-Type: application/json'|
 |-X, --request <command>    |指定请求方法，如：GET, POST, PUT, DELETE等|
+|-d, --data <data>          |POST请求，发送数据                 |
+|-F, --form <name=content>  |POST请求，指定发送的文件           |
 
 
 ######  
@@ -301,6 +303,36 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html
 |time_total                 |从开始到最终完成的时间(秒)         |
 
 ### 
+
+#### 示例：POST发送参数格式数据（application/x-www-url-encoded格式）
+
+```
+curl -d "action=del" -d "id=12" http://ip:port/worldcup/main/file
+```
+
+#### 示例：POST发送JSON格式数据（application/json格式）
+
+```
+curl -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://ip:port/worldcup/main/file
+```
+
+#### 示例：POST发送文件（multipart/form-data格式）
+
+```
+curl -F growth=@growth.tar.gz http://ip:port/worldcup/main/file
+```
+
+#### 示例：执行远程php文件
+
+```
+curl -Ss http://www.workerman.net/check.php | php
+```
+```
+PHP Version >= 5.3.3                  [OK]
+Extension pcntl check                 [OK]
+Extension posix check                 [OK]
+```
+
 
 #### 示例：查看curl的耗时
 
