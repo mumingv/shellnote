@@ -4,16 +4,17 @@
 
 #### 
 
-|命令                                  |功能                                        |
-|--------------------------------------|-------------------------------------------|
-|[awk](#docs/command_list#awk)         |模式扫描处理                                 |
+|命令                                  |功能                                          |
+|--------------------------------------|----------------------------------------------|
+|[awk](#docs/command_list#awk)         |模式扫描处理                                  |
 |[comm](#docs/command_list#comm)       |比较两个排好序的文件                          |
-|[cut](#docs/command_list#cut)         |列模式处理文本                       		   |
-|[grep](#docs/command_list#grep)       |查找模式匹配的行                             |
-|[join](#docs/command_list#join)	   |根据指定字段连接两个文件的对应行				  |
-|[jq](#docs/command_list#jq)		   |JSON处理器								  |
-|[sed](#docs/command_list#sed)         |流式编辑器                                  |
-|[sort](#docs/command_list#sort)       |对文本行进行排序                             |
+|[cut](#docs/command_list#cut)         |列模式处理文本                       		  |
+|[grep](#docs/command_list#grep)       |查找模式匹配的行                              |
+|[join](#docs/command_list#join)	   |根据指定字段连接两个文件的对应行			  |
+|[jq](#docs/command_list#jq)		   |JSON处理器								      |
+|[sed](#docs/command_list#sed)         |流式编辑器                                    |
+|[sort](#docs/command_list#sort)       |对文本行进行排序                              |
+|[uniq](#docs/command_list#uniq)       |基于排好序的文件去除重复的行                  |
 |[tr](#docs/command_list#tr)           |转换或者删除文本中的字符                      |
 
 
@@ -132,6 +133,8 @@
 [tr - translate or delete characters 转换或者删除文本中的字符](#docs/command_list#tr)
 
 [useradd - Create a new user or update default new user information 创建新用户](#docs/command_list#useradd)
+
+[uniq - remove duplicate lines from a sorted file 基于排好序的文件去除重复的行](#docs/command_list#uniq)
 
 [watch - execute a program periodically, showing output fullscreen 定时执行程序并输出结果到终端](#docs/command_list#watch)
 

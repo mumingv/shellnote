@@ -1329,6 +1329,12 @@ Helloworld
 ```
 
 
+## uniq
+
+### 
+
+
+
 ## watch
 
 被watch的命令默认每隔2秒执行一次。
