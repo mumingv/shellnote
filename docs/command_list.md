@@ -1306,11 +1306,12 @@ Helloworld
 
 ###### 
 
-|参数名称                    |参数含义                           |
-|---------------------------|---------------------------------|
+|参数名称                    |参数含义                          |
+|---------------------------|-----------------------------------|
 |-m                         |创建主目录                         |
-|-G                         |指定用户所属的用户组                 |
-|-s                         |指定登录shell                 |
+|-d home_dir                |指定主目录                         |
+|-G                         |指定用户所属的用户组               |
+|-s                         |指定登录shell                      |
 
 #### 示例：root用户登录，新增work账号，同时创建work账号的主目录
 
@@ -1321,6 +1322,103 @@ Helloworld
 <font color="red">
 说明：新建的work账号主目录为/home/work。
 </font>
+
+```
+# useradd -m -d /home/users/mumingv mumingv
+```
+
+<font color="red">
+说明：新建的mumingv账号主目录为/home/users/mumingv。
+</font>
+
+#### 示例：使用root账号，创建一个名为hadoop的用户，指定主目录、所属用户组和登录shell
+
+```
+# useradd -m hadoop -G root -s /bin/bash
+```
+
+
+## uniq
+
+### 
+
+
+
+## watch
+
+被watch的命令默认每隔2秒执行一次。
+
+### 
+
+#### 示例：查看当前目录下文件数量的变化
+
+```
+$ watch 'ls -1 | wc -l'
+```
+
+<font color="red">
+说明：被watch的命令需要使用引号括起来。
+</font>
+
+
+## wc
+
+######  
+
+###  
+
+#### 示例：统计文件中的行数（去除空行）
+
+```bash
+$ cat query.all | grep -v ^$ | wc -l
+```
+
+
+## wget
+
+######   
+
+|参数名称                    |参数含义                           |
+|---------------------------|---------------------------------|
+|-c, --continue             |断电续传                         |
+|-q, --quite                |不打印输出                        |
+|-k, --convert-links        |将绝对链接转为相对链接，下载整个站点后脱机浏览网页，最好加上这个参数|
+|-p, --page-requisites      |下载网页所需的所有文件，如图片等     |
+|-L, --relative             |递归时不进入其它主机               |
+|-r, --recursive            |递归下载                          |
+|-nd, --no-directories      |递归下载时不创建一层一层的目录，把所有的文件下载到当前目录|
+|-nH, --no-host-directories |不要主机目录                       |
+|-np, --no-parent           |递归下载时不搜索上层目录             |
+
+
+### 
+
+#### 示例：下载站点的所有目录和文件
+
+```
+$ wget -r -nH http://xxx.xx.com:8030/
+$ ls -1
+http_server.py
+index.html
+newnext.tar.gz
+news_query.php
+nohup.out
+playcontent.tar.gz
+test.txt
+```
+
+
+#### 示例：下载站点的某个目录
+
+```
+$ wget -q -c -r -nH -np -k -L -p http://xx.xxx.com:8020/20170926/
+$ ls -1
+20170926
+```
+
+
+
+
 
 #### 示例：使用root账号，创建一个名为hadoop的用户，指定主目录、所属用户组和登录shell
 
