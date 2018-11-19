@@ -9,10 +9,11 @@
 |-n requests        |发送的HTTP请求的总数               |
 |-c concurrency     |并发数（即：模拟用户数）           |
 |-k                 |使用长连接模式                     |
+|-p POST-file       |指定POST请求体文件（只能是一行）   |
 
 ###  
 
-#### 示例：10并发，总共发送1000次HTTP请求
+#### 示例：GET请求，10并发，总共发送1000次HTTP请求
 
 ```
 $ ab -c 10 -n 1000 http://123.56.21.232:8206/index.html
@@ -77,6 +78,17 @@ Percentage of the requests served within a certain time (ms)
 |字段名称           |字段含义                           |
 |-------------------|-----------------------------------|
 |Requests per second|每秒请求数，即：Web服务器的吞吐率。</br>计算公式：Complete requests / Time taken for tests  |
+
+
+#### 示例：POST请求
+
+```
+$ ab -c 120 -n 100000 -p post_file http://10.194.71.48:8210/growth/activity
+```
+```
+$ cat post_file
+{"log_id": "ddb26ab0-e65b-11e8-864c-9779a08b0be0_4", "user_info": {"group_ids": [2], "cuid": "3F1843166A6B44FB", "user_id": "1500", "appid": "dmDC7C388CAE1EF843"}, "data": {"request": {"query": "周杰伦的歌曲"}, "bot_result_list": [{"bot_result": [], "bot_id": "84d29000-e208-e563-63ee-5f4a4b7bfb6c"}]}}
+```
 
 
 ## awk
